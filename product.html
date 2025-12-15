@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalog Produk | Reska Stored - Pilihan Terbaik Pria & Wanita</title>
+  <meta name="description" content="Telusuri katalog lengkap produk Reska Stored. Pilihan terbaik untuk pria dan wanita dengan harga kompetitif dan kualitas premium." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    a { 
+      text-decoration: none; 
+      color: inherit;
+    }
+
+    /* Header Produk - DIPERBAIKI */
+    .product-header {
+      background: linear-gradient(135deg, 
+        rgba(17, 24, 39, 0.95) 0%, 
+        rgba(31, 41, 51, 0.92) 50%,
+        rgba(22, 163, 74, 0.15) 100%),
+        url('asset/banner-product.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      padding: 140px 20px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Fallback jika gambar asset tidak ada */
+    .product-header {
+      background: linear-gradient(135deg, 
+        rgba(17, 24, 39, 0.95) 0%, 
+        rgba(31, 41, 51, 0.92) 50%,
+        rgba(22, 163, 74, 0.15) 100%),
+        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    }
+    
+    .product-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 70%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+    }
+    
+    .product-header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease-out;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .product-header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(90deg, #ffffff 0%, #e5e7eb 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding: 0 10px;
+    }
+    
+    .product-header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+      color: #f3f4f6;
+      font-weight: 300;
+      background: rgba(17, 24, 39, 0.4);
+      padding: 20px 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .highlight-text {
+      color: #22c55e;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .highlight-text::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #22c55e, #3b82f6);
+      border-radius: 2px;
+    }
+    
+    .breadcrumb {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 30px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px 25px;
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .breadcrumb a {
+      transition: all 0.3s ease;
+      color: #d1d5db;
+      font-weight: 500;
+    }
+    
+    .breadcrumb a:hover {
+      color: #22c55e;
+      transform: translateY(-2px);
+    }
+    
+    .breadcrumb span {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    
+    .breadcrumb i {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    
+    .header-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+    
+    .stat-item {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      min-width: 150px;
+      transition: all 0.3s ease;
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(34, 197, 94, 0.3);
+    }
+    
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #22c55e;
+      display: block;
+      margin-bottom: 5px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .stat-text {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      padding: 5px 20px;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled .nav-container {
+      padding: 10px 0;
+    }
+    
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo i {
+      color: #22c55e;
+      font-size: 1.8rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+    
+    .nav-links a {
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    .nav-links a:hover {
+      color: #22c55e;
+    }
+    
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #22c55e;
+      transition: width 0.3s;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #111827;
+      cursor: pointer;
+    }
+
+    /* Product Catalog */
+    .product-catalog {
+      padding: 60px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .catalog-container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 40px;
+    }
+    
+    .filter-sidebar {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    
+    .filter-sidebar h3 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      color: #111827;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .filter-group {
+      margin-bottom: 30px;
+    }
+    
+    .filter-group h4 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #444;
+      font-weight: 600;
+    }
+    
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .filter-option:hover {
+      color: #22c55e;
+    }
+    
+    .filter-option input {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    
+    .price-range {
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    .price-values {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .filter-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .btn-filter {
+      flex: 1;
+      padding: 12px;
+      background: #111827;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-filter:hover {
+      background: #22c55e;
+      transform: translateY(-2px);
+    }
+    
+    .btn-reset {
+      flex: 1;
+      padding: 12px;
+      background: #f0f0f0;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-reset:hover {
+      background: #e0e0e0;
+    }
+    
+    /* Product Grid */
+    .catalog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+    .catalog-header h2 {
+      font-size: 1.8rem;
+      color: #111827;
+    }
+    
+    .sort-options {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .sort-options select {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .product-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .product-card:hover { 
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+    
+    .badge-new {
+      background: #3b82f6;
+      color: white;
+    }
+    
+    .badge-sale {
+      background: #ef4444;
+      color: white;
+    }
+    
+    .badge-bestseller {
+      background: #22c55e;
+      color: white;
+    }
+    
+    .product-content { 
+      padding: 25px; 
+    }
+    
+    .product-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    
+    .product-content p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .product-price {
+      color: #16a34a;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .product-price span.old-price {
+      color: #999;
+      font-size: 0.9rem;
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+    
+    .product-actions {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .btn-detail {
+      flex: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      background: #111827;
+      color: #fff;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      gap: 8px;
+      text-decoration: none;
+    }
+    
+    .btn-detail:hover { 
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+    
+    .btn-cart {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background: #f0f0f0;
+      color: #333;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    .btn-cart:hover {
+      background: #22c55e;
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .category-card {
+      display: block;
+      background: #f8f9fb;
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .category-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #22c55e, #3b82f6);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    
+    .category-card:hover {
+      background: #111827;
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border-color: #22c55e;
+    }
+    
+    .category-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .category-card:hover h3,
+    .category-card:hover p {
+      color: white;
+    }
+    
+    .category-card:hover .category-icon {
+      color: #22c55e;
+      transform: scale(1.2) rotate(5deg);
+    }
+    
+    .category-icon {
+      font-size: 3rem;
+      color: #111827;
+      margin-bottom: 20px;
+      transition: all 0.4s ease;
+    }
+    
+    .category-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #111827;
+      transition: color 0.3s;
+    }
+    
+    .category-card p {
+      color: #666;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Product Categories */
+    .product-categories {
+      padding: 60px 20px;
+      background: #fff;
+      margin-top: 40px;
+    }
+    
+    .categories-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .categories-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .categories-title h2 {
+      font-size: 2.2rem;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+    
+    .categories-title p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 60px;
+    }
+    
+    .pagination a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: white;
+      color: #333;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .pagination a:hover,
+    .pagination a.active {
+      background: #111827;
+      color: white;
+    }
+    
+    /* Image Preview Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    
+    .modal-image {
+      max-width: 90%;
+      max-height: 80%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .image-title {
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: white;
+      font-size: 2.5rem;
+      cursor: pointer;
+      transition: color 0.3s;
+      background: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    
+    .close-modal:hover {
+      color: #22c55e;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .modal-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    
+    .modal-nav:hover {
+      color: #22c55e;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .modal-prev {
+      left: 30px;
+    }
+    
+    .modal-next {
+      right: 30px;
+    }
+    
+    .image-counter {
+      position: absolute;
+      bottom: 30px;
+      color: white;
+      font-size: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+    
+    /* Notification */
+    .custom-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #22c55e;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 10000;
+      animation: slideIn 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideOut {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(100%); opacity: 0; }
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: #fff;
+      padding: 60px 20px 30px;
+      margin-top: 40px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .footer-section p {
+      opacity: 0.8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: #22c55e;
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-bottom p { 
+      opacity: 0.7; 
+      font-size: 0.9rem; 
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .catalog-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .filter-sidebar {
+        position: static;
+      }
+      
+      .product-header h1 {
+        font-size: 2.8rem;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .product-header h1 {
+        font-size: 2.4rem;
+      }
+      
+      .product-header p {
+        font-size: 1.1rem;
+        padding: 15px 20px;
+      }
+      
+      .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      
+      .header-stats {
+        gap: 20px;
+      }
+      
+      .stat-item {
+        min-width: 120px;
+        padding: 15px 20px;
+      }
+      
+      .stat-number {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        gap: 15px;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .product-header {
+        padding: 120px 20px 50px;
+        min-height: 50vh;
+        background-attachment: scroll;
+      }
+      
+      .product-header h1 { 
+        font-size: 2.2rem; 
+        margin-bottom: 15px;
+      }
+      
+      .product-header p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 15px;
+      }
+      
+      .catalog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      
+      .sort-options {
+        width: 100%;
+      }
+      
+      .sort-options select {
+        flex: 1;
+      }
+      
+      .product-actions {
+        flex-direction: column;
+      }
+      
+      .btn-detail, .btn-cart {
+        width: 100%;
+      }
+      
+      .breadcrumb {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+      
+      .header-stats {
+        gap: 15px;
+      }
+      
+      .stat-item {
+        min-width: calc(50% - 15px);
+        padding: 15px;
+      }
+      
+      /* Modal responsive */
+      .modal-image {
+        max-width: 95%;
+        max-height: 70%;
+      }
+      
+      .close-modal {
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .modal-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+      }
+      
+      .modal-prev {
+        left: 20px;
+      }
+      
+      .modal-next {
+        right: 20px;
+      }
+      
+      .image-title {
+        font-size: 1rem;
+        margin-top: 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .product-header {
+        padding: 100px 20px 40px;
+      }
+      
+      .product-header h1 { 
+        font-size: 1.9rem; 
+      }
+      
+      .product-header p {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+      }
+      
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .filter-buttons {
+        flex-direction: column;
+      }
+      
+      .breadcrumb {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+        gap: 8px;
+      }
+      
+      .header-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .stat-item {
+        width: 100%;
+        max-width: 250px;
+      }
+      
+      .modal-image {
+        max-height: 60%;
+      }
+      
+      .image-counter {
+        bottom: 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-store"></i>
+        <span>Reska Stored</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="product.html" class="active">Produk</a></li>
+        <li><a href="index.html#keunggulan">Keunggulan</a></li>
+        <li><a href="index.html#tentang">Tentang</a></li>
+        <li><a href="index.html#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Image Preview Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <div class="modal-nav modal-prev" id="prevBtn">&#10094;</div>
+      <div class="modal-nav modal-next" id="nextBtn">&#10095;</div>
+      
+      <img id="modalImage" class="modal-image" src="" alt="">
+      <div id="imageTitle" class="image-title"></div>
+      <div id="imageCounter" class="image-counter"></div>
+    </div>
+  </div>
+
+  <!-- Product Header -->
+  <header class="product-header">
+    <div class="product-header-content">
+      <h1>Katalog Produk Lengkap</h1>
+      <p>Telusuri koleksi <span class="highlight-text">eksklusif</span> produk pilihan untuk pria dan wanita. <span class="highlight-text">Kualitas premium</span> dengan harga terbaik yang langsung dari marketplace terpercaya.</p>
+      
+      <div class="breadcrumb">
+        <a href="index.html">
+          <i class="fas fa-home"></i>
+          Beranda
+        </a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Katalog Produk</span>
+      </div>
+      
+      <div class="header-stats">
+        <div class="stat-item">
+          <span class="stat-number">200+</span>
+          <span class="stat-text">Produk Tersedia</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-text">Merek Terpercaya</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.8</span>
+          <span class="stat-text">Rating Pelanggan</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Catalog -->
+  <section class="product-catalog">
+    <div class="catalog-container">
+      <!-- Filter Sidebar -->
+      <aside class="filter-sidebar">
+        <h3>Filter Produk</h3>
+        
+        <div class="filter-group">
+          <h4>Kategori</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" checked>
+              <span>Semua Produk</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Pakaian Pria</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Pakaian Wanita</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Sepatu</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Aksesoris</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Tas</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Rentang Harga</h4>
+          <input type="range" class="price-range" min="0" max="1000000" step="50000" value="500000">
+          <div class="price-values">
+            <span>Rp 0</span>
+            <span>Rp 1.000.000</span>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Status Produk</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Baru</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Diskon</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox">
+              <span>Terlaris</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-buttons">
+          <button class="btn-filter">Terapkan Filter</button>
+          <button class="btn-reset">Reset</button>
+        </div>
+      </aside>
+      
+      <!-- Product Grid -->
+      <div class="catalog-content">
+        <div class="catalog-header">
+          <h2>Semua Produk <span id="product-count">Terbaik</span></h2>
+          <div class="sort-options">
+            <span>Urutkan:</span>
+            <select id="sort-by">
+              <option value="popular">Populer</option>
+              <option value="new">Terbaru</option>
+              <option value="price-low">Harga Terendah</option>
+              <option value="price-high">Harga Tertinggi</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="product-grid" id="productGrid">
+          <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+          <a href="product.html" class="active">1</a>
+          <a href="katalog2.html">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="product-categories">
+    <div class="categories-container">
+      <div class="categories-title">
+        <h2>Kategori Produk</h2>
+        <p>Telusuri produk berdasarkan kategori favorit Anda</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Pakaian Pria -->
+        <a href="pakaianpria.html" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-tshirt"></i>
+          </div>
+          <h3>Pakaian Pria</h3>
+          <p>Jaket, kemeja, kaos, dan celana untuk pria</p>
+        </a>
+
+        <!-- Pakaian Wanita -->
+        <a href="pakaian-wanita.html" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-female"></i>
+          </div>
+          <h3>Pakaian Wanita</h3>
+          <p>Dress, blouse, rok, dan pakaian wanita lainnya</p>
+        </a>
+
+        <!-- Sepatu -->
+        <a href="sepatu.html" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-shoe-prints"></i>
+          </div>
+          <h3>Sepatu</h3>
+          <p>Sneakers, sepatu formal, dan sandal</p>
+        </a>
+
+        <!-- Tas & Aksesoris -->
+        <a href="tas-aksesoris.html" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3>Tas & Aksesoris</h3>
+          <p>Tas, jam tangan, dan aksesoris lainnya</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Reska Stored</h3>
+        <p>Rekomendasi produk pilihan pria & wanita dengan kualitas terbaik dan harga terjangkau. Belanja mudah, cepat, dan terpercaya.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Navigasi Cepat</h3>
+        <p><a href="index.html">Beranda</a></p>
+        <p><a href="semua-product.html">Semua Produk</a></p>
+        <p><a href="index.html#keunggulan">Keunggulan</a></p>
+        <p><a href="index.html#kontak">Kontak Kami</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Kontak Kami</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+        <p><i class="fas fa-envelope"></i> info@reskastored.com</p>
+        <p><i class="fas fa-clock"></i> Senin - Minggu: open</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Reska Stored • All Product Recommendation • All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Data produk lengkap dengan gambar dari folder asset dan link Shopee asli
+    const productsData = [
+      {
+        id: 1,
+        name: "Jaket Taslant JN Bolak-Balik",
+        category: "pakaianpria",
+        subcategory: "jaket",
+        price: 161000,
+        discountPrice: 399000,
+        rating: 4.5,
+        reviewCount: 342,
+        color: ["hitam", "biru", "abu"],
+        size: ["M", "L", "XL"],
+        tags: ["bestseller", "diskon"],
+        image: "asset/jaket tuslant.webp", // Local asset
+        description: "Jaket pria wanita casual dengan bahan LUAR TASLAN nyaman dan desain modern untuk berbagai kesempatan.",
+        shipping: "Gratis Ongkir",
+        badge: "bestseller",
+        status: "terlaris",
+        shopeeLink: "https://s.shopee.co.id/1gBZpKOx36" // Shopee link asli
+      },
+      {
+        id: 2,
+        name: "Sepatu Running Osnac",
+        category: "sepatu",
+        subcategory: "sneakers",
+        price: 172500,
+        discountPrice: 345000,
+        rating: 4.8,
+        reviewCount: 256,
+        color: ["hitam", "tosca"],
+        size: ["40", "41", "42", "43"],
+        tags: ["diskon", "premium"],
+        image: "asset/Osnca-climax hitamtosca.webp", // Local asset
+        description: "Sepatu running olahraga pria wanita dengan sol nyaman dan desain stylish untuk aktivitas sehari-hari.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/VzcRxRoBZ" // Shopee link asli
+      },
+      {
+        id: 3,
+        name: "Kaos Polo Shirt Pria Premium",
+        category: "pakaianpria",
+        subcategory: "kaos",
+        price: 50109,
+        discountPrice: null,
+        rating: 4.3,
+        reviewCount: 189,
+        color: ["putih", "biru", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["baru", "premium"],
+        image: "asset/kaos-kerah.webp", // Local asset
+        description: "Kaos polo shirt pria lengan pendek terbuat dari bahan katun pique 20S. Desainnya yang stylis cocok untuk berbagai kesempatan.",
+        shipping: "Gratis Ongkir",
+        badge: "new",
+        status: "baru",
+        shopeeLink: "https://s.shopee.co.id/3B0Nd5tW8Q" // Shopee link asli
+      },
+      {
+        id: 4,
+        name: "Tas Wanita Elegant",
+        category: "tasaksesoris",
+        subcategory: "tas",
+        price: 121000,
+        discountPrice: null,
+        rating: 4.6,
+        reviewCount: 142,
+        color: ["coklat", "hitam"],
+        size: [],
+        tags: ["baru", "elegant"],
+        image: "asset/tas-batampx125.webp", // Local asset
+        description: "Tas wanita dengan desain elegant dan ruang yang cukup untuk kebutuhan harian.",
+        shipping: "Gratis Ongkir",
+        badge: "new",
+        status: "baru",
+        shopeeLink: "https://s.shopee.co.id/8V1tzMwyKA" // Shopee link asli
+      },
+      {
+        id: 5,
+        name: "Jaket Pria Trucker Military",
+        category: "pakaianpria",
+        subcategory: "jaket",
+        price: 185000,
+        discountPrice: 249000,
+        rating: 4.7,
+        reviewCount: 98,
+        color: ["army", "hitam"],
+        size: ["M", "L", "XL"],
+        tags: ["military", "diskon"],
+        image: "asset/jaket-trucker.webp", // Local asset
+        description: "Jaket pria trucker dengan bahan nyaman dan desain military yang trendy.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/BMm9iEZUR" // Shopee link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      {
+        id: 6,
+        name: "Kaos Oversize Wanita",
+        category: "pakaianwanita",
+        subcategory: "kaos",
+        price: 67500,
+        discountPrice: 129000,
+        rating: 4.4,
+        reviewCount: 215,
+        color: ["putih", "hitam", "abu"],
+        size: ["S", "M", "L"],
+        tags: ["diskon", "oversize"],
+        image: "asset/kaos-oversizewanita.webp", // Local asset
+        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
+        shipping: "Gratis Ongkir",
+        badge: "sale",
+        status: "diskon",
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+      },
+      
+    ];
+    
+    // State filter
+    let currentFilters = {
+      category: 'semua',
+      minPrice: 0,
+      maxPrice: 1000000,
+      status: [],
+      sortBy: 'popular'
+    };
+    
+    // DOM Elements
+    const productGrid = document.getElementById('productGrid');
+    const productCountElement = document.getElementById('product-count');
+    const priceRangeInput = document.querySelector('.price-range');
+    const priceValues = document.querySelector('.price-values');
+    const sortSelect = document.getElementById('sort-by');
+    const btnFilter = document.querySelector('.btn-filter');
+    const btnReset = document.querySelector('.btn-reset');
+    
+    // Image Preview Modal Elements
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const imageTitle = document.getElementById('imageTitle');
+    const imageCounter = document.getElementById('imageCounter');
+    const closeModal = document.getElementById('closeModal');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    let currentImageIndex = 0;
+    let currentProductImages = [];
+    
+    // Format number with thousand separators
+    function formatNumber(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+    
+    // Update price display
+    function updatePriceDisplay() {
+      const value = parseInt(priceRangeInput.value);
+      const maxPrice = 1000000;
+      const displayPrice = value === maxPrice ? "1.000.000+" : formatNumber(value);
+      priceValues.innerHTML = `<span>Rp 0</span><span>Rp ${displayPrice}</span>`;
+      currentFilters.maxPrice = value;
+    }
+    
+    // Initialize products on page load
+    function initProducts() {
+      renderProducts(productsData);
+      updatePriceDisplay();
+      updateProductCount(productsData.length);
+      setupImagePreview();
+    }
+    
+    // Setup image preview functionality
+    function setupImagePreview() {
+      // Close modal
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+      
+      // Previous button
+      prevBtn.addEventListener('click', () => navigateImage('prev'));
+      
+      // Next button
+      nextBtn.addEventListener('click', () => navigateImage('next'));
+      
+      // Close modal with click outside
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (modal.style.display === 'block') {
+          if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          } else if (e.key === 'ArrowLeft') {
+            navigateImage('prev');
+          } else if (e.key === 'ArrowRight') {
+            navigateImage('next');
+          }
+        }
+      });
+    }
+    
+    // Open image preview
+    function openImagePreview(index) {
+      currentImageIndex = index;
+      updateModal();
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Update modal content
+    function updateModal() {
+      const currentImage = currentProductImages[currentImageIndex];
+      if (currentImage) {
+        modalImage.src = currentImage.src;
+        modalImage.alt = currentImage.title;
+        imageTitle.textContent = `${currentImage.title} - ${currentImage.desc}`;
+        imageCounter.textContent = `${currentImageIndex + 1} / ${currentProductImages.length}`;
+      }
+    }
+    
+    // Navigate between images
+    function navigateImage(direction) {
+      if (direction === 'next') {
+        currentImageIndex = (currentImageIndex + 1) % currentProductImages.length;
+      } else if (direction === 'prev') {
+        currentImageIndex = (currentImageIndex - 1 + currentProductImages.length) % currentProductImages.length;
+      }
+      updateModal();
+    }
+    
+    // Render products to the grid
+    function renderProducts(products) {
+      productGrid.innerHTML = '';
+      currentProductImages = []; // Reset product images for preview
+      
+      if (products.length === 0) {
+        productGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+            <i class="fas fa-search" style="font-size: 3rem; color: #ddd; margin-bottom: 20px;"></i>
+            <h3 style="color: #666; margin-bottom: 10px;">Produk tidak ditemukan</h3>
+            <p style="color: #999;">Coba filter lain atau reset filter untuk melihat semua produk</p>
+          </div>
+        `;
+        return;
+      }
+      
+      products.forEach((product, index) => {
+        const productCard = createProductCard(product, index);
+        productGrid.appendChild(productCard);
+        
+        // Add to preview images array
+        currentProductImages.push({
+          src: product.image,
+          title: product.name,
+          desc: product.description
+        });
+      });
+    }
+    
+    // Create product card element
+    function createProductCard(product, index) {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      
+      // Badge
+      let badgeHTML = '';
+      if (product.badge === 'bestseller') {
+        badgeHTML = '<div class="product-badge badge-bestseller">Terlaris</div>';
+      } else if (product.badge === 'sale') {
+        const discountPercent = Math.round((1 - product.price / product.discountPrice) * 100);
+        badgeHTML = `<div class="product-badge badge-sale">Diskon ${discountPercent}%</div>`;
+      } else if (product.badge === 'new') {
+        badgeHTML = '<div class="product-badge badge-new">Baru</div>';
+      }
+      
+      // Price display
+      let priceHTML = '';
+      if (product.discountPrice) {
+        priceHTML = `
+          <div class="product-price">
+            Rp ${formatNumber(product.price)}
+            <span class="old-price">Rp ${formatNumber(product.discountPrice)}</span>
+          </div>
+        `;
+      } else {
+        priceHTML = `
+          <div class="product-price">
+            Rp ${formatNumber(product.price)}
+          </div>
+        `;
+      }
+      
+      card.innerHTML = `
+        <div class="product-image" data-index="${index}">
+          ${badgeHTML}
+          <img src="${product.image}" alt="${product.name}" 
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80';">
+        </div>
+        <div class="product-content">
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          ${priceHTML}
+          <div class="product-actions">
+            <a href="${product.shopeeLink}" target="_blank" class="btn-detail">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Beli Sekarang</span>
+            </a>
+            <button class="btn-cart" data-product-id="${product.id}">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      `;
+      
+      // Add event listeners
+      const wishlistBtn = card.querySelector('.btn-cart');
+      wishlistBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (this.classList.contains('active')) {
+          icon.className = 'fas fa-heart';
+          showNotification('Ditambahkan ke wishlist');
+          // Save to localStorage
+          addToWishlist(product.id);
+        } else {
+          icon.className = 'fas fa-heart';
+          showNotification('Dihapus dari wishlist');
+          // Remove from localStorage
+          removeFromWishlist(product.id);
+        }
+      });
+      
+      // Check if product is in wishlist
+      if (isInWishlist(product.id)) {
+        wishlistBtn.classList.add('active');
+      }
+      
+      // Image preview
+      const imageContainer = card.querySelector('.product-image');
+      imageContainer.addEventListener('click', function() {
+        const idx = parseInt(this.getAttribute('data-index'));
+        openImagePreview(idx);
+      });
+      
+      return card;
+    }
+    
+    // Wishlist functions
+    function getWishlist() {
+      const wishlist = localStorage.getItem('reskaWishlist');
+      return wishlist ? JSON.parse(wishlist) : [];
+    }
+    
+    function saveWishlist(wishlist) {
+      localStorage.setItem('reskaWishlist', JSON.stringify(wishlist));
+    }
+    
+    function addToWishlist(productId) {
+      const wishlist = getWishlist();
+      if (!wishlist.includes(productId)) {
+        wishlist.push(productId);
+        saveWishlist(wishlist);
+      }
+    }
+    
+    function removeFromWishlist(productId) {
+      let wishlist = getWishlist();
+      wishlist = wishlist.filter(id => id !== productId);
+      saveWishlist(wishlist);
+    }
+    
+    function isInWishlist(productId) {
+      const wishlist = getWishlist();
+      return wishlist.includes(productId);
+    }
+    
+    // Filter products based on current filters
+    function filterProducts() {
+      let filteredProducts = [...productsData];
+      
+      // Filter by category
+      const categoryCheckboxes = document.querySelectorAll('.filter-option input[type="checkbox"]');
+      let selectedCategories = [];
+      categoryCheckboxes.forEach((checkbox, index) => {
+        if (checkbox.checked && index !== 0) { // Skip "Semua Produk" if others are selected
+          const categoryText = checkbox.parentElement.querySelector('span').textContent;
+          const categoryMap = {
+            'Pakaian Pria': 'pakaianpria',
+            'Pakaian Wanita': 'pakaianwanita',
+            'Sepatu': 'sepatu',
+            'Aksesoris': 'tasaksesoris',
+            'Tas': 'tasaksesoris'
+          };
+          if (categoryMap[categoryText]) {
+            selectedCategories.push(categoryMap[categoryText]);
+          }
+        }
+      });
+      
+      // If specific categories are selected, filter by them
+      if (selectedCategories.length > 0) {
+        filteredProducts = filteredProducts.filter(product => 
+          selectedCategories.includes(product.category)
+        );
+      }
+      
+      // Filter by price
+      filteredProducts = filteredProducts.filter(product => 
+        product.price <= currentFilters.maxPrice
+      );
+      
+      // Filter by status
+      const statusCheckboxes = document.querySelectorAll('.filter-group:nth-child(3) .filter-option input[type="checkbox"]');
+      let selectedStatus = [];
+      statusCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          const statusText = checkbox.parentElement.querySelector('span').textContent.toLowerCase();
+          const statusMap = {
+            'baru': 'baru',
+            'diskon': 'diskon',
+            'terlaris': 'terlaris'
+          };
+          if (statusMap[statusText]) {
+            selectedStatus.push(statusMap[statusText]);
+          }
+        }
+      });
+      
+      if (selectedStatus.length > 0) {
+        filteredProducts = filteredProducts.filter(product => 
+          product.status && selectedStatus.includes(product.status)
+        );
+      }
+      
+      // Sort products
+      filteredProducts = sortProducts(filteredProducts, currentFilters.sortBy);
+      
+      return filteredProducts;
+    }
+    
+    // Sort products
+    function sortProducts(products, sortBy) {
+      const sorted = [...products];
+      
+      switch(sortBy) {
+        case 'popular':
+          return sorted.sort((a, b) => b.reviewCount - a.reviewCount);
+        case 'new':
+          return sorted.sort((a, b) => b.id - a.id);
+        case 'price-low':
+          return sorted.sort((a, b) => a.price - b.price);
+        case 'price-high':
+          return sorted.sort((a, b) => b.price - a.price);
+        default:
+          return sorted;
+      }
+    }
+    
+    // Update product count display
+    function updateProductCount(count) {
+      productCountElement.textContent = `(${count} produk)`;
+    }
+    
+    // Show notification
+    function showNotification(message) {
+      // Remove existing notification
+      const existingNotification = document.querySelector('.custom-notification');
+      if (existingNotification) {
+        existingNotification.remove();
+      }
+      
+      // Create notification
+      const notification = document.createElement('div');
+      notification.className = 'custom-notification';
+      notification.innerHTML = `
+        <i class="fas fa-check-circle"></i>
+        <span>${message}</span>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      // Remove after 3 seconds
+      setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.remove();
+          }
+        }, 300);
+      }, 3000);
+    }
+    
+    // Apply filters and update display
+    function applyFilters() {
+      const filteredProducts = filterProducts();
+      renderProducts(filteredProducts);
+      updateProductCount(filteredProducts.length);
+      
+      // Show notification with filter info
+      const selectedCategories = [];
+      document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
+        if (!cb.parentElement.textContent.includes('Semua Produk')) {
+          selectedCategories.push(cb.parentElement.textContent.trim());
+        }
+      });
+      
+      let message = 'Filter diterapkan!';
+      if (selectedCategories.length > 0) {
+        message += ` Kategori: ${selectedCategories.join(', ')}`;
+      }
+      if (currentFilters.maxPrice < 1000000) {
+        message += ` | Harga ≤ Rp ${formatNumber(currentFilters.maxPrice)}`;
+      }
+      
+      showNotification(message);
+    }
+    
+    // Reset all filters
+    function resetFilters() {
+      // Reset checkboxes
+      document.querySelectorAll('.filter-option input[type="checkbox"]').forEach((cb, index) => {
+        cb.checked = index === 0; // Only "Semua Produk" checked
+      });
+      
+      // Reset price range
+      priceRangeInput.value = 1000000;
+      updatePriceDisplay();
+      
+      // Reset sort
+      sortSelect.value = 'popular';
+      currentFilters.sortBy = 'popular';
+      
+      // Reset state
+      currentFilters = {
+        category: 'semua',
+        minPrice: 0,
+        maxPrice: 1000000,
+        status: [],
+        sortBy: 'popular'
+      };
+      
+      // Show all products
+      renderProducts(productsData);
+      updateProductCount(productsData.length);
+      
+      showNotification('Semua filter direset! Menampilkan semua produk.');
+    }
+    
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', initProducts);
+    
+    // Price range change
+    priceRangeInput.addEventListener('input', updatePriceDisplay);
+    priceRangeInput.addEventListener('change', applyFilters);
+    
+    // Filter button
+    btnFilter.addEventListener('click', applyFilters);
+    
+    // Reset button
+    btnReset.addEventListener('click', resetFilters);
+    
+    // Sort change
+    sortSelect.addEventListener('change', function() {
+      currentFilters.sortBy = this.value;
+      applyFilters();
+    });
+    
+    // Checkbox changes (apply filter when checked/unchecked)
+    document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        // If this is "Semua Produk" and it's being checked, uncheck others
+        if (this.parentElement.textContent.includes('Semua Produk') && this.checked) {
+          document.querySelectorAll('.filter-option input[type="checkbox"]:not(:first-child)').forEach(cb => {
+            cb.checked = false;
+          });
+        }
+        
+        // If any other checkbox is checked, uncheck "Semua Produk"
+        if (!this.parentElement.textContent.includes('Semua Produk') && this.checked) {
+          document.querySelector('.filter-option:first-child input[type="checkbox"]').checked = false;
+        }
+        
+        // If no checkboxes are checked, check "Semua Produk"
+        const anyChecked = Array.from(document.querySelectorAll('.filter-option input[type="checkbox"]')).some(cb => cb.checked);
+        if (!anyChecked) {
+          document.querySelector('.filter-option:first-child input[type="checkbox"]').checked = true;
+        }
+        
+        applyFilters();
+      });
+    });
+    
+    // Category cards navigation
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (!this.href) {
+          e.preventDefault();
+          const categoryName = this.querySelector('h3').textContent;
+          showNotification(`Membuka kategori: ${categoryName}`);
+        }
+      });
+    });
+    
+    // Header animation on load
+    window.addEventListener('load', () => {
+      const headerContent = document.querySelector('.product-header-content');
+      if (headerContent) {
+        headerContent.style.animation = 'fadeInUp 1s ease-out';
+      }
+    });
+  </script>
+</body>
+</html>
