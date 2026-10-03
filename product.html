@@ -5,8 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Katalog Produk | Reska Stored - Pilihan Terbaik Pria & Wanita</title>
   <meta name="description" content="Telusuri katalog lengkap produk Reska Stored. Pilihan terbaik untuk pria dan wanita dengan harga kompetitif dan kualitas premium." />
+  <meta name="keywords" content="katalog produk, fashion pria, fashion wanita, sepatu, tas, jaket, reska stored" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph untuk sosial media -->
+  <meta property="og:title" content="Katalog Produk | Reska Stored" />
+  <meta property="og:description" content="Pilihan terbaik produk pria & wanita dengan harga kompetitif." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://reskastored.com/product.html" />
+  <meta property="og:image" content="https://reskastored.com/asset/banner-product.webp" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://reskastored.com/product.html" />
+  
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Analytics GA4 - GANTI G-XXXXXXXXXX dengan ID Anda -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
   <style>
     * { 
       box-sizing: border-box; 
@@ -26,7 +50,7 @@
       color: inherit;
     }
 
-    /* Header Produk - DIPERBAIKI */
+    /* ===== HEADER PRODUK ===== */
     .product-header {
       background: linear-gradient(135deg, 
         rgba(17, 24, 39, 0.95) 0%, 
@@ -45,15 +69,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    
-    /* Fallback jika gambar asset tidak ada */
-    .product-header {
-      background: linear-gradient(135deg, 
-        rgba(17, 24, 39, 0.95) 0%, 
-        rgba(31, 41, 51, 0.92) 50%,
-        rgba(22, 163, 74, 0.15) 100%),
-        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     }
     
     .product-header::before {
@@ -170,49 +185,24 @@
       font-size: 0.9rem;
       color: #9ca3af;
     }
-    
-    .header-stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 50px;
-      flex-wrap: wrap;
-    }
-    
-    .stat-item {
+
+    /* ===== DISCLOSURE BANNER ===== */
+    .disclosure-banner {
+      background: #fff8e1;
+      padding: 15px 20px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px 30px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      min-width: 150px;
-      transition: all 0.3s ease;
+      border-bottom: 1px solid #ffe082;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
     }
     
-    .stat-item:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(34, 197, 94, 0.3);
-    }
-    
-    .stat-number {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #22c55e;
-      display: block;
-      margin-bottom: 5px;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .stat-text {
-      font-size: 0.95rem;
-      opacity: 0.9;
-      color: #e5e7eb;
-      font-weight: 500;
+    .disclosure-banner i {
+      color: #f59e0b;
+      margin-right: 5px;
     }
 
-    /* Navigation */
+    /* ===== NAVIGATION ===== */
     .navbar {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -273,7 +263,8 @@
       padding: 5px 0;
     }
     
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: #22c55e;
     }
     
@@ -288,7 +279,8 @@
       transition: width 0.3s;
     }
     
-    .nav-links a:hover::after {
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
       width: 100%;
     }
     
@@ -301,7 +293,7 @@
       cursor: pointer;
     }
 
-    /* Product Catalog */
+    /* ===== PRODUCT CATALOG ===== */
     .product-catalog {
       padding: 60px 20px;
       max-width: 1400px;
@@ -419,7 +411,7 @@
       background: #e0e0e0;
     }
     
-    /* Product Grid */
+    /* ===== PRODUCT GRID ===== */
     .catalog-header {
       display: flex;
       justify-content: space-between;
@@ -461,6 +453,8 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
     
     .product-card:hover { 
@@ -474,6 +468,7 @@
       overflow: hidden;
       position: relative;
       cursor: pointer;
+      background: #f5f5f5;
     }
     
     .product-card img {
@@ -514,13 +509,18 @@
     }
     
     .product-content { 
-      padding: 25px; 
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
     
     .product-content h3 {
       font-size: 1.2rem;
       margin-bottom: 10px;
       font-weight: 600;
+      line-height: 1.4;
+      min-height: 50px;
     }
     
     .product-content p {
@@ -528,6 +528,20 @@
       font-size: 0.9rem;
       margin-bottom: 15px;
       line-height: 1.5;
+      flex: 1;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    
+    .product-rating .stars {
+      color: #fbbf24;
     }
     
     .product-price {
@@ -538,6 +552,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
     
     .product-price span.old-price {
@@ -550,6 +565,7 @@
     .product-actions {
       display: flex;
       gap: 10px;
+      margin-top: auto;
     }
     
     .btn-detail {
@@ -565,6 +581,7 @@
       transition: all 0.3s ease;
       gap: 8px;
       text-decoration: none;
+      font-size: 0.9rem;
     }
     
     .btn-detail:hover { 
@@ -589,11 +606,17 @@
     }
     
     .btn-cart:hover {
-      background: #22c55e;
+      background: #ef4444;
       color: white;
       transform: translateY(-2px);
     }
     
+    .btn-cart.active {
+      background: #ef4444;
+      color: white;
+    }
+    
+    /* ===== CATEGORY CARDS ===== */
     .category-card {
       display: block;
       background: #f8f9fb;
@@ -664,7 +687,7 @@
       line-height: 1.5;
     }
 
-    /* Product Categories */
+    /* ===== PRODUCT CATEGORIES SECTION ===== */
     .product-categories {
       padding: 60px 20px;
       background: #fff;
@@ -699,7 +722,7 @@
       gap: 30px;
     }
     
-    /* Pagination */
+    /* ===== PAGINATION ===== */
     .pagination {
       display: flex;
       justify-content: center;
@@ -728,7 +751,7 @@
       color: white;
     }
     
-    /* Image Preview Modal */
+    /* ===== IMAGE PREVIEW MODAL ===== */
     .modal {
       display: none;
       position: fixed;
@@ -818,13 +841,8 @@
       transform: translateY(-50%) scale(1.1);
     }
     
-    .modal-prev {
-      left: 30px;
-    }
-    
-    .modal-next {
-      right: 30px;
-    }
+    .modal-prev { left: 30px; }
+    .modal-next { right: 30px; }
     
     .image-counter {
       position: absolute;
@@ -836,7 +854,7 @@
       border-radius: 20px;
     }
     
-    /* Notification */
+    /* ===== NOTIFICATION ===== */
     .custom-notification {
       position: fixed;
       top: 20px;
@@ -851,6 +869,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      max-width: 90%;
     }
     
     @keyframes slideIn {
@@ -863,7 +882,7 @@
       to { transform: translateX(100%); opacity: 0; }
     }
 
-    /* Footer */
+    /* ===== FOOTER ===== */
     footer {
       background: #111827;
       color: #fff;
@@ -889,6 +908,16 @@
       opacity: 0.8;
       font-size: 0.95rem;
       line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    
+    .footer-section p a {
+      color: #bbb;
+      transition: color 0.3s;
+    }
+    
+    .footer-section p a:hover {
+      color: #22c55e;
     }
     
     .social-links {
@@ -921,10 +950,19 @@
     
     .footer-bottom p { 
       opacity: 0.7; 
-      font-size: 0.9rem; 
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .footer-disclosure {
+      max-width: 800px;
+      margin: 0 auto 15px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      line-height: 1.6;
     }
 
-    /* Responsive Styles */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 1200px) {
       .catalog-container {
         grid-template-columns: 1fr;
@@ -951,19 +989,6 @@
       
       .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      }
-      
-      .header-stats {
-        gap: 20px;
-      }
-      
-      .stat-item {
-        min-width: 120px;
-        padding: 15px 20px;
-      }
-      
-      .stat-number {
-        font-size: 1.8rem;
       }
     }
     
@@ -1033,16 +1058,6 @@
         font-size: 0.9rem;
       }
       
-      .header-stats {
-        gap: 15px;
-      }
-      
-      .stat-item {
-        min-width: calc(50% - 15px);
-        padding: 15px;
-      }
-      
-      /* Modal responsive */
       .modal-image {
         max-width: 95%;
         max-height: 70%;
@@ -1062,13 +1077,8 @@
         font-size: 1.5rem;
       }
       
-      .modal-prev {
-        left: 20px;
-      }
-      
-      .modal-next {
-        right: 20px;
-      }
+      .modal-prev { left: 20px; }
+      .modal-next { right: 20px; }
       
       .image-title {
         font-size: 1rem;
@@ -1108,17 +1118,6 @@
         gap: 8px;
       }
       
-      .header-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-      
-      .stat-item {
-        width: 100%;
-        max-width: 250px;
-      }
-      
       .modal-image {
         max-height: 60%;
       }
@@ -1132,7 +1131,7 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
@@ -1140,7 +1139,7 @@
         <span>Reska Stored</span>
       </a>
       
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
         <i class="fas fa-bars"></i>
       </button>
       
@@ -1154,12 +1153,12 @@
     </div>
   </nav>
 
-  <!-- Image Preview Modal -->
-  <div id="imageModal" class="modal">
+  <!-- ===== IMAGE PREVIEW MODAL ===== -->
+  <div id="imageModal" class="modal" role="dialog" aria-hidden="true">
     <div class="modal-content">
-      <span class="close-modal" id="closeModal">&times;</span>
-      <div class="modal-nav modal-prev" id="prevBtn">&#10094;</div>
-      <div class="modal-nav modal-next" id="nextBtn">&#10095;</div>
+      <span class="close-modal" id="closeModal" aria-label="Tutup">&times;</span>
+      <div class="modal-nav modal-prev" id="prevBtn" aria-label="Sebelumnya">&#10094;</div>
+      <div class="modal-nav modal-next" id="nextBtn" aria-label="Berikutnya">&#10095;</div>
       
       <img id="modalImage" class="modal-image" src="" alt="">
       <div id="imageTitle" class="image-title"></div>
@@ -1167,7 +1166,7 @@
     </div>
   </div>
 
-  <!-- Product Header -->
+  <!-- ===== PRODUCT HEADER ===== -->
   <header class="product-header">
     <div class="product-header-content">
       <h1>Katalog Produk Lengkap</h1>
@@ -1181,11 +1180,18 @@
         <i class="fas fa-chevron-right"></i>
         <span>Katalog Produk</span>
       </div>
-      </div>
     </div>
   </header>
 
-  <!-- Product Catalog -->
+  <!-- ===== DISCLOSURE BANNER ===== -->
+  <div class="disclosure-banner">
+    <i class="fas fa-info-circle"></i>
+    <strong>Disclosure:</strong> Halaman ini mengandung link afiliasi. 
+    Jika Anda membeli melalui link tersebut, kami mungkin menerima komisi 
+    <em>tanpa biaya tambahan untuk Anda</em>. Terima kasih atas dukungannya! 🙏
+  </div>
+
+  <!-- ===== PRODUCT CATALOG ===== -->
   <section class="product-catalog">
     <div class="catalog-container">
       <!-- Filter Sidebar -->
@@ -1196,35 +1202,31 @@
           <h4>Kategori</h4>
           <div class="filter-options">
             <label class="filter-option">
-              <input type="checkbox" checked>
+              <input type="checkbox" checked data-category="semua">
               <span>Semua Produk</span>
             </label>
             <label class="filter-option">
-              <input type="checkbox">
+              <input type="checkbox" data-category="pakaianpria">
               <span>Pakaian Pria</span>
             </label>
             <label class="filter-option">
-              <input type="checkbox">
+              <input type="checkbox" data-category="pakaianwanita">
               <span>Pakaian Wanita</span>
             </label>
             <label class="filter-option">
-              <input type="checkbox">
+              <input type="checkbox" data-category="sepatu">
               <span>Sepatu</span>
             </label>
             <label class="filter-option">
-              <input type="checkbox">
-              <span>Aksesoris</span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox">
-              <span>Tas</span>
+              <input type="checkbox" data-category="tasaksesoris">
+              <span>Tas & Aksesoris</span>
             </label>
           </div>
         </div>
         
         <div class="filter-group">
           <h4>Rentang Harga</h4>
-          <input type="range" class="price-range" min="0" max="1000000" step="50000" value="500000">
+          <input type="range" class="price-range" min="0" max="1000000" step="50000" value="1000000">
           <div class="price-values">
             <span>Rp 0</span>
             <span>Rp 1.000.000</span>
@@ -1235,30 +1237,30 @@
           <h4>Status Produk</h4>
           <div class="filter-options">
             <label class="filter-option">
-              <input type="checkbox">
+              <input type="checkbox" data-status="baru">
               <span>Baru</span>
             </label>
             <label class="filter-option">
-              <input type="checkbox">
+              <input type="checkbox" data-status="diskon">
               <span>Diskon</span>
             </label>
             <label class="filter-option">
-              <input type="checkbox">
+              <input type="checkbox" data-status="terlaris">
               <span>Terlaris</span>
             </label>
           </div>
         </div>
         
         <div class="filter-buttons">
-          <button class="btn-filter">Terapkan Filter</button>
-          <button class="btn-reset">Reset</button>
+          <button class="btn-filter" id="btnFilter">Terapkan Filter</button>
+          <button class="btn-reset" id="btnReset">Reset</button>
         </div>
       </aside>
       
       <!-- Product Grid -->
       <div class="catalog-content">
         <div class="catalog-header">
-          <h2>Semua Produk <span id="product-count">Terbaik</span></h2>
+          <h2>Semua Produk <span id="product-count"></span></h2>
           <div class="sort-options">
             <span>Urutkan:</span>
             <select id="sort-by">
@@ -1271,24 +1273,13 @@
         </div>
         
         <div class="product-grid" id="productGrid">
-          <!-- Products will be loaded dynamically via JavaScript -->
-        </div>
-        
-        <!-- Pagination -->
-        <div class="pagination">
-          <a href="product.html" class="active">1</a>
-          <a href="katalog2.html">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">
-            <i class="fas fa-chevron-right"></i>
-          </a>
+          <!-- Produk akan dimuat otomatis via JavaScript -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Product Categories -->
+  <!-- ===== PRODUCT CATEGORIES ===== -->
   <section class="product-categories">
     <div class="categories-container">
       <div class="categories-title">
@@ -1297,7 +1288,6 @@
       </div>
 
       <div class="categories-grid">
-        <!-- Pakaian Pria -->
         <a href="pakaianpria.html" class="category-card">
           <div class="category-icon">
             <i class="fas fa-tshirt"></i>
@@ -1306,7 +1296,6 @@
           <p>Jaket, kemeja, kaos, dan celana untuk pria</p>
         </a>
 
-        <!-- Pakaian Wanita -->
         <a href="pakaian-wanita.html" class="category-card">
           <div class="category-icon">
             <i class="fas fa-female"></i>
@@ -1315,7 +1304,6 @@
           <p>Dress, blouse, rok, dan pakaian wanita lainnya</p>
         </a>
 
-        <!-- Sepatu -->
         <a href="sepatu.html" class="category-card">
           <div class="category-icon">
             <i class="fas fa-shoe-prints"></i>
@@ -1324,7 +1312,6 @@
           <p>Sneakers, sepatu formal, dan sandal</p>
         </a>
 
-        <!-- Tas & Aksesoris -->
         <a href="tas-aksesoris.html" class="category-card">
           <div class="category-icon">
             <i class="fas fa-briefcase"></i>
@@ -1336,23 +1323,23 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h3>Reska Stored</h3>
         <p>Rekomendasi produk pilihan pria & wanita dengan kualitas terbaik dan harga terjangkau. Belanja mudah, cepat, dan terpercaya.</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-section">
         <h3>Navigasi Cepat</h3>
         <p><a href="index.html">Beranda</a></p>
-        <p><a href="semua-product.html">Semua Produk</a></p>
+        <p><a href="product.html">Semua Produk</a></p>
         <p><a href="index.html#keunggulan">Keunggulan</a></p>
         <p><a href="index.html#kontak">Kontak Kami</a></p>
       </div>
@@ -1360,17 +1347,26 @@
         <h3>Kontak Kami</h3>
         <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
         <p><i class="fas fa-envelope"></i> info@reskastored.com</p>
-        <p><i class="fas fa-clock"></i> Senin - Minggu: open</p>
+        <p><i class="fas fa-clock"></i> Senin - Minggu: Buka 24 Jam</p>
       </div>
     </div>
     
     <div class="footer-bottom">
+      <p class="footer-disclosure">
+        <strong>Disclosure Afiliasi:</strong> Reska Stored berpartisipasi dalam program 
+        afiliasi Shopee, Tokopedia, dan program lainnya. Kami dapat menerima komisi 
+        dari pembelian yang dilakukan melalui link di situs ini, tanpa biaya tambahan 
+        untuk Anda.
+      </p>
       <p>© 2025 Reska Stored • All Product Recommendation • All Rights Reserved</p>
     </div>
   </footer>
 
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // Mobile menu toggle
+    /* ============================================
+       1. MOBILE MENU TOGGLE
+       ============================================ */
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
     
@@ -1381,7 +1377,6 @@
         : '<i class="fas fa-bars"></i>';
     });
     
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -1389,7 +1384,9 @@
       });
     });
     
-    // Navbar scroll effect
+    /* ============================================
+       2. NAVBAR SCROLL EFFECT
+       ============================================ */
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 50) {
@@ -1399,7 +1396,9 @@
       }
     });
     
-    // Data produk lengkap dengan gambar dari folder asset dan link Shopee asli
+    /* ============================================
+       3. DATA PRODUK (SUDAH DIBERSIHKAN)
+       ============================================ */
     const productsData = [
       {
         id: 1,
@@ -1410,15 +1409,12 @@
         discountPrice: 399000,
         rating: 4.5,
         reviewCount: 342,
-        color: ["hitam", "biru", "abu"],
-        size: ["M", "L", "XL"],
         tags: ["bestseller", "diskon"],
-        image: "jaket tuslant.webp", // Local asset
+        image: "jaket tuslant.webp",
         description: "Jaket pria wanita casual dengan bahan LUAR TASLAN nyaman dan desain modern untuk berbagai kesempatan.",
-        shipping: "Gratis Ongkir",
         badge: "bestseller",
         status: "terlaris",
-        shopeeLink: "https://s.shopee.co.id/1gBZpKOx36" // Shopee link asli
+        shopeeLink: "https://s.shopee.co.id/1gBZpKOx36"
       },
       {
         id: 2,
@@ -1429,15 +1425,12 @@
         discountPrice: 345000,
         rating: 4.8,
         reviewCount: 256,
-        color: ["hitam", "tosca"],
-        size: ["40", "41", "42", "43"],
         tags: ["diskon", "premium"],
-        image: "Osnca-climax hitamtosca.webp", // Local asset
+        image: "Osnca-climax hitamtosca.webp",
         description: "Sepatu running olahraga pria wanita dengan sol nyaman dan desain stylish untuk aktivitas sehari-hari.",
-        shipping: "Gratis Ongkir",
         badge: "sale",
         status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/VzcRxRoBZ" // Shopee link asli
+        shopeeLink: "https://s.shopee.co.id/VzcRxRoBZ"
       },
       {
         id: 3,
@@ -1448,15 +1441,12 @@
         discountPrice: null,
         rating: 4.3,
         reviewCount: 189,
-        color: ["putih", "biru", "abu"],
-        size: ["S", "M", "L"],
         tags: ["baru", "premium"],
-        image: "kaos-kerah.webp", // Local asset
+        image: "kaos-kerah.webp",
         description: "Kaos polo shirt pria lengan pendek terbuat dari bahan katun pique 20S. Desainnya yang stylis cocok untuk berbagai kesempatan.",
-        shipping: "Gratis Ongkir",
         badge: "new",
         status: "baru",
-        shopeeLink: "https://s.shopee.co.id/3B0Nd5tW8Q" // Shopee link asli
+        shopeeLink: "https://s.shopee.co.id/3B0Nd5tW8Q"
       },
       {
         id: 4,
@@ -1467,15 +1457,12 @@
         discountPrice: null,
         rating: 4.6,
         reviewCount: 142,
-        color: ["coklat", "hitam"],
-        size: [],
         tags: ["baru", "elegant"],
-        image: "tas-batampx125.webp", // Local asset
+        image: "tas-batampx125.webp",
         description: "Tas wanita dengan desain elegant dan ruang yang cukup untuk kebutuhan harian.",
-        shipping: "Gratis Ongkir",
         badge: "new",
         status: "baru",
-        shopeeLink: "https://s.shopee.co.id/8V1tzMwyKA" // Shopee link asli
+        shopeeLink: "https://s.shopee.co.id/8V1tzMwyKA"
       },
       {
         id: 5,
@@ -1486,15 +1473,12 @@
         discountPrice: 249000,
         rating: 4.7,
         reviewCount: 98,
-        color: ["army", "hitam"],
-        size: ["M", "L", "XL"],
         tags: ["military", "diskon"],
-        image: "jaket-trucker.webp", // Local asset
+        image: "jaket-trucker.webp",
         description: "Jaket pria trucker dengan bahan nyaman dan desain military yang trendy.",
-        shipping: "Gratis Ongkir",
         badge: "sale",
         status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/BMm9iEZUR" // Shopee link asli
+        shopeeLink: "https://s.shopee.co.id/BMm9iEZUR"
       },
       {
         id: 6,
@@ -1505,152 +1489,71 @@
         discountPrice: 129000,
         rating: 4.4,
         reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
         tags: ["diskon", "oversize"],
-        image: "kaos-oversizewanita.webp", // Local asset
+        image: "kaos-oversizewanita.webp",
         description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
-        shipping: "Gratis Ongkir",
         badge: "sale",
         status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
+        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg"
       },
       {
         id: 7,
-        name: "KINAYA BLOUSE SHAKILLA KEMEJA ATASAN WANITA",
+        name: "KINAYA Blouse Shakilla Kemeja Atasan Wanita",
         category: "pakaianwanita",
-        subcategory: "Blouse",
+        subcategory: "blouse",
         price: 65000,
         discountPrice: 85000,
         rating: 4.4,
         reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
-        tags: ["diskon", "oversize"],
-        image: "blouse-wanita.jpg", // Local asset
+        tags: ["diskon", "blouse"],
+        image: "blouse-wanita.jpg",
         description: "KINAYA BLOUSE SHAKILLA KEMEJA ATASAN WANITA MOTIF PAYET BUNGA.",
-        shipping: "Gratis Ongkir",
         badge: "sale",
         status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/6AgzvvHvKZ" // Ganti dengan link asli
+        shopeeLink: "https://s.shopee.co.id/6AgzvvHvKZ"
       },
       {
-        id: 6,
-        name: "Kaos Oversize Wanita",
+        id: 8,
+        name: "ULRICA Setelan Crincle Wanita",
         category: "pakaianwanita",
-        subcategory: "kaos",
+        subcategory: "setelan",
         price: 67500,
         discountPrice: 129000,
         rating: 4.4,
         reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
-        tags: ["diskon", "oversize"],
-        image: "kaos-oversizewanita.webp", // Local asset
-        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
-        shipping: "Gratis Ongkir",
+        tags: ["diskon", "setelan"],
+        image: "https://res.cloudinary.com/dallrhriq/image/upload/v1770734849/buqhtid-11134207-7r98t-lu4nmm31opae75_ge3nps.jpg",
+        description: "Setelan crincle wanita dengan atasan kemeja oval dan celana lurus bahan crincle airflow.",
         badge: "sale",
         status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
-      },
-      {
-        id: 6,
-        name: "Kaos Oversize Wanita",
-        category: "pakaianwanita",
-        subcategory: "kaos",
-        price: 67500,
-        discountPrice: 129000,
-        rating: 4.4,
-        reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
-        tags: ["diskon", "oversize"],
-        image: "kaos-oversizewanita.webp", // Local asset
-        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
-        shipping: "Gratis Ongkir",
-        badge: "sale",
-        status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
-      },
-      {
-        id: 6,
-        name: "Kaos Oversize Wanita",
-        category: "pakaianwanita",
-        subcategory: "kaos",
-        price: 67500,
-        discountPrice: 129000,
-        rating: 4.4,
-        reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
-        tags: ["diskon", "oversize"],
-        image: "kaos-oversizewanita.webp", // Local asset
-        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
-        shipping: "Gratis Ongkir",
-        badge: "sale",
-        status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
-      },
-      {
-        id: 6,
-        name: "ULRICA SETELAN CRINCLE WANITA LD 120  ATASAN KEMEJA OVAL CELANA LURUS BAHAN CRINCLE AIRFLOW",
-        category: "pakaianwanita",
-        subcategory: "kaos",
-        price: 67500,
-        discountPrice: 129000,
-        rating: 4.4,
-        reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
-        tags: ["diskon", "oversize"],
-        image: "https://res.cloudinary.com/dallrhriq/image/upload/v1770734849/buqhtid-11134207-7r98t-lu4nmm31opae75_ge3nps.jpg", // Local asset
-        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
-        shipping: "Gratis Ongkir",
-        badge: "sale",
-        status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/7VAq9MmOn2" // Ganti dengan link asli
-      },
-      {
-        id: 6,
-        name: "Kaos Oversize Wanita",
-        category: "pakaianwanita",
-        subcategory: "kaos",
-        price: 67500,
-        discountPrice: 129000,
-        rating: 4.4,
-        reviewCount: 215,
-        color: ["putih", "hitam", "abu"],
-        size: ["S", "M", "L"],
-        tags: ["diskon", "oversize"],
-        image: "kaos-oversizewanita.webp", // Local asset
-        description: "Kaos oversize dengan bahan katun lembut dan desain casual yang stylish.",
-        shipping: "Gratis Ongkir",
-        badge: "sale",
-        status: "diskon",
-        shopeeLink: "https://s.shopee.co.id/6KxPYhrrVg" // Ganti dengan link asli
-      },
-      
+        shopeeLink: "https://s.shopee.co.id/7VAq9MmOn2"
+      }
     ];
     
-    // State filter
+    /* ============================================
+       4. STATE FILTER
+       ============================================ */
     let currentFilters = {
-      category: 'semua',
-      minPrice: 0,
+      categories: [],
       maxPrice: 1000000,
       status: [],
       sortBy: 'popular'
     };
     
-    // DOM Elements
+    /* ============================================
+       5. DOM ELEMENTS
+       ============================================ */
     const productGrid = document.getElementById('productGrid');
     const productCountElement = document.getElementById('product-count');
     const priceRangeInput = document.querySelector('.price-range');
     const priceValues = document.querySelector('.price-values');
     const sortSelect = document.getElementById('sort-by');
-    const btnFilter = document.querySelector('.btn-filter');
-    const btnReset = document.querySelector('.btn-reset');
+    const btnFilter = document.getElementById('btnFilter');
+    const btnReset = document.getElementById('btnReset');
     
-    // Image Preview Modal Elements
+    /* ============================================
+       6. MODAL ELEMENTS
+       ============================================ */
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const imageTitle = document.getElementById('imageTitle');
@@ -1662,12 +1565,13 @@
     let currentImageIndex = 0;
     let currentProductImages = [];
     
-    // Format number with thousand separators
+    /* ============================================
+       7. UTILITY FUNCTIONS
+       ============================================ */
     function formatNumber(num) {
       return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
     
-    // Update price display
     function updatePriceDisplay() {
       const value = parseInt(priceRangeInput.value);
       const maxPrice = 1000000;
@@ -1676,7 +1580,9 @@
       currentFilters.maxPrice = value;
     }
     
-    // Initialize products on page load
+    /* ============================================
+       8. INIT PRODUCTS
+       ============================================ */
     function initProducts() {
       renderProducts(productsData);
       updatePriceDisplay();
@@ -1684,21 +1590,18 @@
       setupImagePreview();
     }
     
-    // Setup image preview functionality
+    /* ============================================
+       9. SETUP IMAGE PREVIEW
+       ============================================ */
     function setupImagePreview() {
-      // Close modal
       closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
       });
       
-      // Previous button
       prevBtn.addEventListener('click', () => navigateImage('prev'));
-      
-      // Next button
       nextBtn.addEventListener('click', () => navigateImage('next'));
       
-      // Close modal with click outside
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
           modal.style.display = 'none';
@@ -1706,7 +1609,6 @@
         }
       });
       
-      // Keyboard navigation
       document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'block') {
           if (e.key === 'Escape') {
@@ -1721,7 +1623,6 @@
       });
     }
     
-    // Open image preview
     function openImagePreview(index) {
       currentImageIndex = index;
       updateModal();
@@ -1729,7 +1630,6 @@
       document.body.style.overflow = 'hidden';
     }
     
-    // Update modal content
     function updateModal() {
       const currentImage = currentProductImages[currentImageIndex];
       if (currentImage) {
@@ -1740,7 +1640,6 @@
       }
     }
     
-    // Navigate between images
     function navigateImage(direction) {
       if (direction === 'next') {
         currentImageIndex = (currentImageIndex + 1) % currentProductImages.length;
@@ -1750,10 +1649,12 @@
       updateModal();
     }
     
-    // Render products to the grid
+    /* ============================================
+       10. RENDER PRODUCTS
+       ============================================ */
     function renderProducts(products) {
       productGrid.innerHTML = '';
-      currentProductImages = []; // Reset product images for preview
+      currentProductImages = [];
       
       if (products.length === 0) {
         productGrid.innerHTML = `
@@ -1770,7 +1671,6 @@
         const productCard = createProductCard(product, index);
         productGrid.appendChild(productCard);
         
-        // Add to preview images array
         currentProductImages.push({
           src: product.image,
           title: product.name,
@@ -1779,23 +1679,23 @@
       });
     }
     
-    // Create product card element
+    /* ============================================
+       11. CREATE PRODUCT CARD (DENGAN rel="nofollow sponsored")
+       ============================================ */
     function createProductCard(product, index) {
       const card = document.createElement('div');
       card.className = 'product-card';
       
-      // Badge
       let badgeHTML = '';
       if (product.badge === 'bestseller') {
         badgeHTML = '<div class="product-badge badge-bestseller">Terlaris</div>';
-      } else if (product.badge === 'sale') {
+      } else if (product.badge === 'sale' && product.discountPrice) {
         const discountPercent = Math.round((1 - product.price / product.discountPrice) * 100);
         badgeHTML = `<div class="product-badge badge-sale">Diskon ${discountPercent}%</div>`;
       } else if (product.badge === 'new') {
         badgeHTML = '<div class="product-badge badge-new">Baru</div>';
       }
       
-      // Price display
       let priceHTML = '';
       if (product.discountPrice) {
         priceHTML = `
@@ -1805,36 +1705,43 @@
           </div>
         `;
       } else {
-        priceHTML = `
-          <div class="product-price">
-            Rp ${formatNumber(product.price)}
-          </div>
-        `;
+        priceHTML = `<div class="product-price">Rp ${formatNumber(product.price)}</div>`;
       }
+      
+      const starsHTML = '★'.repeat(Math.round(product.rating)) + '☆'.repeat(5 - Math.round(product.rating));
       
       card.innerHTML = `
         <div class="product-image" data-index="${index}">
           ${badgeHTML}
-          <img src="${product.image}" alt="${product.name}" 
-               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80';">
+          <img src="${product.image}" alt="${product.name}" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=735&q=80';">
         </div>
         <div class="product-content">
           <h3>${product.name}</h3>
           <p>${product.description}</p>
+          <div class="product-rating">
+            <span class="stars">${starsHTML}</span>
+            <span>${product.rating} (${product.reviewCount} ulasan)</span>
+          </div>
           ${priceHTML}
           <div class="product-actions">
-            <a href="${product.shopeeLink}" target="_blank" class="btn-detail">
+            <a href="${product.shopeeLink}" 
+               target="_blank" 
+               rel="nofollow sponsored noopener" 
+               class="btn-detail"
+               data-product-id="${product.id}"
+               data-product-name="${product.name}">
               <i class="fas fa-shopping-cart"></i>
               <span>Beli Sekarang</span>
             </a>
-            <button class="btn-cart" data-product-id="${product.id}">
-              <i class="fas fa-heart"></i>
+            <button class="btn-cart" data-product-id="${product.id}" aria-label="Tambah ke wishlist">
+              <i class="far fa-heart"></i>
             </button>
           </div>
         </div>
       `;
       
-      // Add event listeners
+      // Wishlist button
       const wishlistBtn = card.querySelector('.btn-cart');
       wishlistBtn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -1842,20 +1749,18 @@
         const icon = this.querySelector('i');
         if (this.classList.contains('active')) {
           icon.className = 'fas fa-heart';
-          showNotification('Ditambahkan ke wishlist');
-          // Save to localStorage
+          showNotification('❤️ Ditambahkan ke wishlist');
           addToWishlist(product.id);
         } else {
-          icon.className = 'fas fa-heart';
+          icon.className = 'far fa-heart';
           showNotification('Dihapus dari wishlist');
-          // Remove from localStorage
           removeFromWishlist(product.id);
         }
       });
       
-      // Check if product is in wishlist
       if (isInWishlist(product.id)) {
         wishlistBtn.classList.add('active');
+        wishlistBtn.querySelector('i').className = 'fas fa-heart';
       }
       
       // Image preview
@@ -1865,10 +1770,27 @@
         openImagePreview(idx);
       });
       
+      // Track klik affiliate ke Google Analytics
+      const buyBtn = card.querySelector('.btn-detail');
+      buyBtn.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            event_category: 'engagement',
+            event_label: product.name,
+            value: product.price,
+            currency: 'IDR',
+            product_id: product.id,
+            product_category: product.category
+          });
+        }
+      });
+      
       return card;
     }
     
-    // Wishlist functions
+    /* ============================================
+       12. WISHLIST FUNCTIONS
+       ============================================ */
     function getWishlist() {
       const wishlist = localStorage.getItem('reskaWishlist');
       return wishlist ? JSON.parse(wishlist) : [];
@@ -1897,57 +1819,45 @@
       return wishlist.includes(productId);
     }
     
-    // Filter products based on current filters
+    /* ============================================
+       13. FILTER PRODUCTS
+       ============================================ */
     function filterProducts() {
       let filteredProducts = [...productsData];
       
-      // Filter by category
-      const categoryCheckboxes = document.querySelectorAll('.filter-option input[type="checkbox"]');
-      let selectedCategories = [];
-      categoryCheckboxes.forEach((checkbox, index) => {
-        if (checkbox.checked && index !== 0) { // Skip "Semua Produk" if others are selected
-          const categoryText = checkbox.parentElement.querySelector('span').textContent;
-          const categoryMap = {
-            'Pakaian Pria': 'pakaianpria',
-            'Pakaian Wanita': 'pakaianwanita',
-            'Sepatu': 'sepatu',
-            'Aksesoris': 'tasaksesoris',
-            'Tas': 'tasaksesoris'
-          };
-          if (categoryMap[categoryText]) {
-            selectedCategories.push(categoryMap[categoryText]);
-          }
+      // Ambil kategori terpilih
+      const categoryCheckboxes = document.querySelectorAll('.filter-option input[type="checkbox"][data-category]');
+      const selectedCategories = [];
+      categoryCheckboxes.forEach(cb => {
+        if (cb.checked && cb.dataset.category !== 'semua') {
+          selectedCategories.push(cb.dataset.category);
         }
       });
       
-      // If specific categories are selected, filter by them
+      currentFilters.categories = selectedCategories;
+      
+      // Filter by kategori
       if (selectedCategories.length > 0) {
         filteredProducts = filteredProducts.filter(product => 
           selectedCategories.includes(product.category)
         );
       }
       
-      // Filter by price
+      // Filter by harga
       filteredProducts = filteredProducts.filter(product => 
         product.price <= currentFilters.maxPrice
       );
       
       // Filter by status
-      const statusCheckboxes = document.querySelectorAll('.filter-group:nth-child(3) .filter-option input[type="checkbox"]');
-      let selectedStatus = [];
-      statusCheckboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-          const statusText = checkbox.parentElement.querySelector('span').textContent.toLowerCase();
-          const statusMap = {
-            'baru': 'baru',
-            'diskon': 'diskon',
-            'terlaris': 'terlaris'
-          };
-          if (statusMap[statusText]) {
-            selectedStatus.push(statusMap[statusText]);
-          }
+      const statusCheckboxes = document.querySelectorAll('.filter-option input[type="checkbox"][data-status]');
+      const selectedStatus = [];
+      statusCheckboxes.forEach(cb => {
+        if (cb.checked) {
+          selectedStatus.push(cb.dataset.status);
         }
       });
+      
+      currentFilters.status = selectedStatus;
       
       if (selectedStatus.length > 0) {
         filteredProducts = filteredProducts.filter(product => 
@@ -1955,13 +1865,15 @@
         );
       }
       
-      // Sort products
+      // Sort
       filteredProducts = sortProducts(filteredProducts, currentFilters.sortBy);
       
       return filteredProducts;
     }
     
-    // Sort products
+    /* ============================================
+       14. SORT PRODUCTS
+       ============================================ */
     function sortProducts(products, sortBy) {
       const sorted = [...products];
       
@@ -1979,20 +1891,22 @@
       }
     }
     
-    // Update product count display
+    /* ============================================
+       15. UPDATE PRODUCT COUNT
+       ============================================ */
     function updateProductCount(count) {
       productCountElement.textContent = `(${count} produk)`;
     }
     
-    // Show notification
+    /* ============================================
+       16. NOTIFICATION
+       ============================================ */
     function showNotification(message) {
-      // Remove existing notification
       const existingNotification = document.querySelector('.custom-notification');
       if (existingNotification) {
         existingNotification.remove();
       }
       
-      // Create notification
       const notification = document.createElement('div');
       notification.className = 'custom-notification';
       notification.innerHTML = `
@@ -2002,7 +1916,6 @@
       
       document.body.appendChild(notification);
       
-      // Remove after 3 seconds
       setTimeout(() => {
         notification.style.animation = 'slideOut 0.3s ease';
         setTimeout(() => {
@@ -2013,36 +1926,45 @@
       }, 3000);
     }
     
-    // Apply filters and update display
+    /* ============================================
+       17. APPLY FILTERS
+       ============================================ */
     function applyFilters() {
       const filteredProducts = filterProducts();
       renderProducts(filteredProducts);
       updateProductCount(filteredProducts.length);
       
-      // Show notification with filter info
-      const selectedCategories = [];
-      document.querySelectorAll('.filter-option input[type="checkbox"]:checked').forEach(cb => {
-        if (!cb.parentElement.textContent.includes('Semua Produk')) {
-          selectedCategories.push(cb.parentElement.textContent.trim());
-        }
-      });
-      
-      let message = 'Filter diterapkan!';
-      if (selectedCategories.length > 0) {
-        message += ` Kategori: ${selectedCategories.join(', ')}`;
+      let message = '✅ Filter diterapkan!';
+      if (currentFilters.categories.length > 0) {
+        message += ` Kategori: ${currentFilters.categories.length}`;
       }
       if (currentFilters.maxPrice < 1000000) {
-        message += ` | Harga ≤ Rp ${formatNumber(currentFilters.maxPrice)}`;
+        message += ` | ≤ Rp ${formatNumber(currentFilters.maxPrice)}`;
       }
       
       showNotification(message);
+      
+      // Track filter ke GA
+      if (typeof gtag === 'function') {
+        gtag('event', 'filter_products', {
+          event_category: 'engagement',
+          event_label: 'filter_applied'
+        });
+      }
     }
     
-    // Reset all filters
+    /* ============================================
+       18. RESET FILTERS
+       ============================================ */
     function resetFilters() {
-      // Reset checkboxes
-      document.querySelectorAll('.filter-option input[type="checkbox"]').forEach((cb, index) => {
-        cb.checked = index === 0; // Only "Semua Produk" checked
+      // Reset checkboxes kategori
+      document.querySelectorAll('.filter-option input[type="checkbox"][data-category]').forEach(cb => {
+        cb.checked = cb.dataset.category === 'semua';
+      });
+      
+      // Reset checkboxes status
+      document.querySelectorAll('.filter-option input[type="checkbox"][data-status]').forEach(cb => {
+        cb.checked = false;
       });
       
       // Reset price range
@@ -2051,80 +1973,59 @@
       
       // Reset sort
       sortSelect.value = 'popular';
-      currentFilters.sortBy = 'popular';
       
       // Reset state
       currentFilters = {
-        category: 'semua',
-        minPrice: 0,
+        categories: [],
         maxPrice: 1000000,
         status: [],
         sortBy: 'popular'
       };
       
-      // Show all products
       renderProducts(productsData);
       updateProductCount(productsData.length);
       
-      showNotification('Semua filter direset! Menampilkan semua produk.');
+      showNotification('🔄 Semua filter direset!');
     }
     
-    // Event Listeners
+    /* ============================================
+       19. EVENT LISTENERS
+       ============================================ */
     document.addEventListener('DOMContentLoaded', initProducts);
     
-    // Price range change
     priceRangeInput.addEventListener('input', updatePriceDisplay);
-    priceRangeInput.addEventListener('change', applyFilters);
     
-    // Filter button
     btnFilter.addEventListener('click', applyFilters);
-    
-    // Reset button
     btnReset.addEventListener('click', resetFilters);
     
-    // Sort change
     sortSelect.addEventListener('change', function() {
       currentFilters.sortBy = this.value;
       applyFilters();
     });
     
-    // Checkbox changes (apply filter when checked/unchecked)
-    document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+    // Checkbox kategori
+    document.querySelectorAll('.filter-option input[type="checkbox"][data-category]').forEach(checkbox => {
       checkbox.addEventListener('change', function() {
-        // If this is "Semua Produk" and it's being checked, uncheck others
-        if (this.parentElement.textContent.includes('Semua Produk') && this.checked) {
-          document.querySelectorAll('.filter-option input[type="checkbox"]:not(:first-child)').forEach(cb => {
+        if (this.dataset.category === 'semua' && this.checked) {
+          document.querySelectorAll('.filter-option input[type="checkbox"][data-category]:not([data-category="semua"])').forEach(cb => {
             cb.checked = false;
           });
         }
         
-        // If any other checkbox is checked, uncheck "Semua Produk"
-        if (!this.parentElement.textContent.includes('Semua Produk') && this.checked) {
-          document.querySelector('.filter-option:first-child input[type="checkbox"]').checked = false;
+        if (this.dataset.category !== 'semua' && this.checked) {
+          document.querySelector('.filter-option input[data-category="semua"]').checked = false;
         }
         
-        // If no checkboxes are checked, check "Semua Produk"
-        const anyChecked = Array.from(document.querySelectorAll('.filter-option input[type="checkbox"]')).some(cb => cb.checked);
-        if (!anyChecked) {
-          document.querySelector('.filter-option:first-child input[type="checkbox"]').checked = true;
-        }
+        const anyCategoryChecked = Array.from(
+          document.querySelectorAll('.filter-option input[type="checkbox"][data-category]:not([data-category="semua"])')
+        ).some(cb => cb.checked);
         
-        applyFilters();
-      });
-    });
-    
-    // Category cards navigation
-    document.querySelectorAll('.category-card').forEach(card => {
-      card.addEventListener('click', function(e) {
-        if (!this.href) {
-          e.preventDefault();
-          const categoryName = this.querySelector('h3').textContent;
-          showNotification(`Membuka kategori: ${categoryName}`);
+        if (!anyCategoryChecked) {
+          document.querySelector('.filter-option input[data-category="semua"]').checked = true;
         }
       });
     });
     
-    // Header animation on load
     window.addEventListener('load', () => {
       const headerContent = document.querySelector('.product-header-content');
       if (headerContent) {
@@ -2133,6 +2034,4 @@
     });
   </script>
 </body>
-
 </html>
-
