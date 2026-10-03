@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reskajaya.github.io/reska-stored/sitemap.xml
