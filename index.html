@@ -2,1438 +2,1129 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Reska Stored - Rekomendasi Produk Pria & Wanita</title>
-
-    <meta name="description"
-          content="Reska Stored menyediakan rekomendasi dan review produk pria, wanita, fashion, sepatu, tas, jaket, dan perlengkapan outdoor pilihan dengan harga terjangkau.">
-
-    <meta name="robots"
-          content="index, follow">
-
-    <link rel="canonical"
-          href="https://reskajaya.github.io/reska-stored/">
-
-    <meta property="og:title"
-          content="Reska Stored - Rekomendasi Produk Pilihan">
-
-    <meta property="og:description"
-          content="Temukan rekomendasi produk fashion, sepatu, tas, jaket, dan outdoor pilihan di Reska Stored.">
-
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:url"
-          content="https://reskajaya.github.io/reska-stored/">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    * { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f8f9fb;
-      color: #333;
-      line-height: 1.6;
-    }
+    <!-- ===== SEO META TAGS ===== -->
+    <title>Reska Stored - Rekomendasi Produk Pilihan Pria & Wanita Terbaik 2025</title>
+    <meta name="description" content="Reska Stored adalah website rekomendasi & review produk pria dan wanita terpercaya. Temukan jaket, sepatu, tas, dan fashion pilihan dengan harga terjangkau dari marketplace resmi.">
+    <meta name="keywords" content="rekomendasi produk, review produk, fashion pria, fashion wanita, sepatu pria, tas wanita, jaket pria, reska stored">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Reska Stored">
     
-    a { 
-      text-decoration: none; 
-      color: inherit;
-    }
-
-    /* Header dengan Banner */
-    header {
-      background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(31, 41, 51, 0.9)),
-                  url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #fff;
-      padding: 100px 20px;
-      text-align: center;
-      position: relative;
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reska Stored - Rekomendasi Produk Pilihan Pria & Wanita">
+    <meta property="og:description" content="Temukan produk fashion, sepatu, tas, dan jaket terbaik dengan harga terjangkau. Rekomendasi jujur dari Reska Stored.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reskajaya.github.io/reska-stored/">
+    <meta property="og:image" content="https://reskajaya.github.io/reska-stored/asset/banner-product.webp">
     
-    .header-content {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      animation: fadeInUp 1s ease-out;
-    }
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://reskajaya.github.io/reska-stored/">
     
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="asset/favicon.png">
+    
+    <!-- Google Analytics GA4 - GANTI G-XXXXXXXXXX DENGAN ID ANDA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Schema Markup untuk Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Reska Stored",
+      "url": "https://reskajaya.github.io/reska-stored/",
+      "description": "Website rekomendasi dan review produk pria & wanita terpercaya di Indonesia",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://reskajaya.github.io/reska-stored/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
-    
-    header h1 {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-    
-    header .tagline {
-      font-size: 1.4rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      opacity: 0.95;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-    
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 40px 0;
-      flex-wrap: wrap;
-    }
-    
-    .stat-item {
-      text-align: center;
-    }
-    
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #22c55e;
-      display: block;
-      margin-bottom: 5px;
-    }
-    
-    .stat-text {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-    
-    .cta-header {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10px;
-      padding: 18px 40px;
-      background: #22c55e;
-      color: #fff;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-      gap: 10px;
-      border: 2px solid transparent;
-    }
-    
-    .cta-header:hover { 
-      background: transparent;
-      border-color: #22c55e;
-      color: #22c55e;
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(34, 197, 94, 0.5);
-    }
-    
-    .cta-header i {
-      font-size: 1rem;
-      transition: transform 0.3s ease;
-    }
-    
-    .cta-header:hover i {
-      transform: translateX(5px);
-    }
-    
-    .scroll-down {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 1.5rem;
-      animation: bounce 2s infinite;
-      cursor: pointer;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-    
-    .scroll-down:hover {
-      opacity: 1;
-    }
-    
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) translateX(-50%);
-      }
-      40% {
-        transform: translateY(-10px) translateX(-50%);
-      }
-      60% {
-        transform: translateY(-5px) translateX(-50%);
-      }
-    }
-
-    /* Navigation */
-    .navbar {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 0 20px;
-      transition: all 0.3s ease;
-    }
-    
-    .navbar.scrolled {
-      padding: 5px 20px;
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 15px 0;
-      transition: all 0.3s ease;
-    }
-    
-    .navbar.scrolled .nav-container {
-      padding: 10px 0;
-    }
-    
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #111827;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .logo i {
-      color: #22c55e;
-      font-size: 1.8rem;
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 35px;
-    }
-    
-    .nav-links a {
-      font-weight: 500;
-      transition: color 0.3s;
-      position: relative;
-      padding: 5px 0;
-    }
-    
-    .nav-links a:hover {
-      color: #22c55e;
-    }
-    
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #22c55e;
-      transition: width 0.3s;
-    }
-    
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-    
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: #111827;
-      cursor: pointer;
-    }
-
-    /* Section */
-    section { 
-      padding: 100px 20px; 
-    }
-    
-    .container { 
-      max-width: 1200px; 
-      margin: auto; 
-    }
-    
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    
-    .section-title h2 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-      color: #111827;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .section-title h2::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: #22c55e;
-      border-radius: 2px;
-    }
-    
-    .section-title p {
-      color: #666;
-      max-width: 600px;
-      margin: 30px auto 0;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    /* Product Grid */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    
-    .product-card {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    .product-card:hover { 
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-    }
-    
-    .product-image {
-      width: 100%;
-      height: 240px;
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-    }
-    
-    .product-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover img {
-      transform: scale(1.05);
-    }
-    
-    .product-badge {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: #22c55e;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      z-index: 2;
-    }
-    
-    .product-content { 
-      padding: 25px; 
-    }
-    
-    .product-content h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-    
-    .product-content p {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
-    
-    .price {
-      color: #16a34a;
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .price span.old-price {
-      color: #999;
-      font-size: 0.9rem;
-      text-decoration: line-through;
-      font-weight: 400;
-    }
-    
-    .btn-buy {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 12px 20px;
-      background: #111827;
-      color: #fff;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      gap: 8px;
-    }
-    
-    .btn-buy:hover { 
-      background: #2563eb;
-      transform: translateY(-2px);
-    }
-
-    /* Benefits */
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-    
-    .benefit {
-      background: #fff;
-      padding: 40px 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    
-    .benefit:hover {
-      transform: translateY(-5px);
-    }
-    
-    .benefit-icon {
-      font-size: 2.5rem;
-      color: #22c55e;
-      margin-bottom: 20px;
-    }
-    
-    .benefit h4 { 
-      margin-bottom: 15px; 
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-    
-    .benefit p {
-      color: #666;
-      line-height: 1.6;
-    }
-
-    /* Image Preview Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      z-index: 2000;
-      animation: fadeIn 0.3s ease;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    
-    .modal-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      position: relative;
-    }
-    
-    .modal-image {
-      max-width: 90%;
-      max-height: 80%;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-    
-    .image-title {
-      color: white;
-      font-size: 1.2rem;
-      margin-top: 20px;
-      text-align: center;
-      padding: 0 20px;
-      max-width: 800px;
-    }
-    
-    .close-modal {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      color: white;
-      font-size: 2.5rem;
-      cursor: pointer;
-      transition: color 0.3s;
-      background: rgba(0, 0, 0, 0.5);
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-    }
-    
-    .close-modal:hover {
-      color: #22c55e;
-      background: rgba(255, 255, 255, 0.1);
-    }
-    
-    .modal-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      color: white;
-      font-size: 2rem;
-      cursor: pointer;
-      transition: all 0.3s;
-      background: rgba(0, 0, 0, 0.5);
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-    }
-    
-    .modal-nav:hover {
-      color: #22c55e;
-      background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-50%) scale(1.1);
-    }
-    
-    .modal-prev {
-      left: 30px;
-    }
-    
-    .modal-next {
-      right: 30px;
-    }
-    
-    .image-counter {
-      position: absolute;
-      bottom: 30px;
-      color: white;
-      font-size: 1rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 8px 15px;
-      border-radius: 20px;
-    }
-
-    /* Footer */
-    footer {
-      background: #111827;
-      color: #fff;
-      padding: 60px 20px 30px;
-      margin-top: 40px;
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto 40px;
-    }
-    
-    .footer-section h3 {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-    
-    .footer-section p {
-      opacity: 0.8;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-    
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-    
-    .social-links a:hover {
-      background: #22c55e;
-      transform: translateY(-3px);
-    }
-    
-    .footer-bottom {
-      text-align: center;
-      padding-top: 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .footer-bottom p { 
-      opacity: 0.7; 
-      font-size: 0.9rem; 
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 1200px) {
-      header h1 { font-size: 2.8rem; }
-    }
-    
-    @media (max-width: 992px) {
-      header h1 { font-size: 2.4rem; }
-      header .tagline { font-size: 1.2rem; }
-      .section-title h2 { font-size: 2rem; }
-      .products {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      }
-      .stats {
-        gap: 30px;
-      }
-      .stat-number {
-        font-size: 2rem;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      header {
-        min-height: 80vh;
-        padding: 80px 20px;
-        background-attachment: scroll;
-      }
-      
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        gap: 15px;
-      }
-      
-      .nav-links.active {
-        display: flex;
-      }
-      
-      .mobile-menu-btn {
-        display: block;
-      }
-      
-      header h1 { 
-        font-size: 2rem; 
-        line-height: 1.2;
-      }
-      
-      header .tagline { 
-        font-size: 1.1rem; 
-        line-height: 1.6;
-      }
-      
-      .stats {
-        gap: 25px;
-      }
-      
-      .stat-item {
-        flex: 0 0 calc(50% - 25px);
-      }
-      
-      .stat-number {
-        font-size: 1.8rem;
-      }
-      
-      section { 
-        padding: 80px 20px; 
-      }
-      
-      .section-title { 
-        margin-bottom: 40px; 
-      }
-      
-      .section-title h2 { 
-        font-size: 1.8rem; 
-      }
-      
-      .benefits {
-        grid-template-columns: 1fr;
-      }
-      
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      
-      /* Modal responsive */
-      .modal-image {
-        max-width: 95%;
-        max-height: 70%;
-      }
-      
-      .close-modal {
-        top: 20px;
-        right: 20px;
-        font-size: 2rem;
-        width: 40px;
-        height: 40px;
-      }
-      
-      .modal-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-      }
-      
-      .modal-prev {
-        left: 20px;
-      }
-      
-      .modal-next {
-        right: 20px;
-      }
-      
-      .image-title {
-        font-size: 1rem;
-        margin-top: 15px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      header {
-        padding: 60px 20px;
-        min-height: 75vh;
-      }
-      
-      header h1 { 
-        font-size: 1.8rem; 
-      }
-      
-      header .tagline { 
-        font-size: 1rem; 
-      }
-      
-      .stats {
-        gap: 20px;
-      }
-      
-      .stat-item {
-        flex: 0 0 100%;
-      }
-      
-      .section-title h2 { 
-        font-size: 1.6rem; 
-      }
-      
-      .product-image { 
-        height: 200px; 
-      }
-      
-      .cta-header, .btn-buy {
-        padding: 15px 25px;
-      }
-      
-      .cta-header {
-        font-size: 1rem;
-      }
-      
-      .modal-image {
-        max-height: 60%;
-      }
-      
-      .image-counter {
-        bottom: 20px;
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+    </script>
+    
+    <!-- Schema FAQ (agar muncul di Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apakah Reska Stored menjual produk langsung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak. Reska Stored adalah website rekomendasi dan review. Pembelian dilakukan melalui marketplace resmi seperti Shopee dengan link afiliasi yang kami sediakan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah produk di Reska Stored asli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya. Kami hanya merekomendasikan produk dari penjual terverifikasi di marketplace resmi dengan rating minimal 4.3 dan ulasan positif dari pembeli sebelumnya."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Berapa lama pengiriman produk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pengiriman sepenuhnya diatur oleh penjual di marketplace. Umumnya 1-7 hari kerja tergantung lokasi Anda dan jenis pengiriman yang dipilih."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah ada biaya tambahan jika beli lewat link Reska Stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak ada. Harga produk sama persis seperti di marketplace. Kami hanya mendapat komisi kecil dari penjual tanpa menambah harga untuk Anda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara memilih produk yang tepat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Baca deskripsi produk, cek rating dan ulasan pembeli, sesuaikan dengan kebutuhan dan budget Anda. Jika ragu, hubungi kami melalui halaman kontak."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --primary: #111827;
+            --accent: #22c55e;
+            --accent-dark: #16a34a;
+            --bg-light: #f8f9fb;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border: #e5e7eb;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i { color: var(--accent); font-size: 1.8rem; }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--accent); }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, rgba(17,24,39,0.95), rgba(31,41,51,0.9)),
+                        url('asset/banner-product.webp') center/cover;
+            color: #fff;
+            padding: 100px 20px 80px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span { color: var(--accent); }
+        
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            color: #e5e7eb;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn-outline:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+        
+        /* ===== SECTIONS UMUM ===== */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.05rem;
+        }
+        
+        /* ===== PRODUK GRID ===== */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #f5f5f5;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img { transform: scale(1.08); }
+        
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .badge-terlaris { background: #22c55e; }
+        .badge-diskon { background: #ef4444; }
+        .badge-baru { background: #3b82f6; }
+        
+        .product-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+        
+        .product-content h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .product-content p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            flex: 1;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .product-price .old-price {
+            font-size: 0.85rem;
+            color: #999;
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+        
+        .btn-buy {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-buy:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        /* ===== SECTION KONTEN ASLI (Anti Thin Content) ===== */
+        .content-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+            text-align: left;
+        }
+        
+        .content-section h2::after {
+            margin: 15px 0 0;
+        }
+        
+        .content-section h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 12px;
+            color: var(--primary);
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            color: #374151;
+            line-height: 1.8;
+        }
+        
+        .content-section ol,
+        .content-section ul {
+            margin: 15px 0 20px 25px;
+            color: #374151;
+        }
+        
+        .content-section li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .content-section strong { color: var(--primary); }
+        
+        /* ===== FAQ ===== */
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+        
+        .faq-item:last-child { border-bottom: none; }
+        
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+            padding-top: 12px;
+        }
+        
+        /* ===== DISCLOSURE ===== */
+        .disclosure-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 900px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #78350f;
+        }
+        
+        .disclosure-box strong { color: #92400e; }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: #e5e7eb;
+            padding: 60px 20px 25px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-section h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+        }
+        
+        .footer-section p,
+        .footer-section li {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #9ca3af;
+            margin-bottom: 8px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: #9ca3af;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover { color: var(--accent); }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links li { width: 100%; padding: 12px 0; border-bottom: 1px solid var(--border); }
+            .mobile-menu-btn { display: block; }
+            
+            .hero { padding: 70px 20px 60px; min-height: 400px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            
+            section { padding: 50px 15px; }
+            section h2 { font-size: 1.5rem; }
+            
+            .content-section { padding: 30px 20px; margin: 20px 15px; }
+            .content-section h2 { font-size: 1.4rem; }
+            .content-section h3 { font-size: 1.15rem; }
+            
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <i class="fas fa-store"></i>
-        <span>Reska Stored</span>
-      </a>
-      
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="product.html">Produk</a></li>
-        <li><a href="#keunggulan">Keunggulan</a></li>
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-store"></i>
+                <span>Reska Stored</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#panduan">Panduan Belanja</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Image Preview Modal -->
-  <div id="imageModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" id="closeModal">&times;</span>
-      <div class="modal-nav modal-prev" id="prevBtn">&#10094;</div>
-      <div class="modal-nav modal-next" id="nextBtn">&#10095;</div>
-      
-      <img id="modalImage" class="modal-image" src="" alt="">
-      <div id="imageTitle" class="image-title"></div>
-      <div id="imageCounter" class="image-counter"></div>
-    </div>
-  </div>
-
-  <!-- Header dengan Banner Gambar -->
-  <header id="beranda">
-    <div class="header-content">
-      <h1>Gaya Pria dan Wanita </h1>
-<p class="tagline">
-Reska Stored adalah website rekomendasi dan review produk pria & wanita pilihan.
-Kami membantu Anda menemukan produk terbaik dengan harga terjangkau melalui marketplace terpercaya.
-</p>
-      
-      <p>Temukan produk menarik dari berbagai marketplace melalui rekomendasi dan ulasan Reska Stored.</p>
-      
-      <a href="semua-product.html" class="cta-header">
-        <span>Jelajahi Koleksi</span>
-        <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-    
-    <div class="scroll-down" onclick="document.getElementById('produk').scrollIntoView({behavior: 'smooth'})">
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </header>
-
-  <!-- Products Section -->
-  <section id="produk">
-    <div class="container">
-      <div class="section-title">
-        <h2>Produk Rekomendasi</h2>
-        <p>Pilihan produk terbaik yang kami rekomendasikan untuk Anda. Kualitas premium dengan harga terjangkau.</p>
-      </div>
-
-      <div class="products">
-        <!-- Product 1 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(0)">
-            <div class="product-badge">Terlaris</div>
-            <img src="jaket tuslant.webp" alt="Jaket Pria Casual">
-          </div>
-          <div class="product-content">
-            <h3>Jaket Taslant JN Bolak-Balik Cowok Cewek </h3>
-            <p>Jaket pria wanita casual dengan bahan LUAR TASLAN  nyaman dan desain modern untuk berbagai kesempatan.</p>
-            <div class="price">
-              Rp 161.000
-              <span class="old-price">Rp 399.000</span>
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Rekomendasi Produk <span>Pria & Wanita</span> Terbaik 2025</h1>
+            <p>
+                Reska Stored membantu Anda menemukan produk fashion, sepatu, tas, dan jaket berkualitas 
+                dengan harga terjangkau. Setiap produk telah melewati proses kurasi ketat berdasarkan 
+                rating, ulasan pembeli, dan reputasi penjual. Belanja hemat, aman, dan terpercaya.
+            </p>
+            <div class="hero-buttons">
+                <a href="#produk" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i>
+                    Lihat Produk
+                </a>
+                <a href="#panduan" class="btn btn-outline">
+                    <i class="fas fa-book"></i>
+                    Panduan Belanja
+                </a>
             </div>
-            <a href="https://s.shopee.co.id/1gBZpKOx36" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
         </div>
+    </header>
 
-        <!-- Product 2 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(1)">
-            <div class="product-badge">Diskon 20%</div>
-            <img src="Osnca-climax hitamtosca.webp" alt="Sepatu Sneakers">
-          </div>
-          <div class="product-content">
-            <h3>Osnac- Sepatu Running Olahraga Pria Wanita</h3>
-            <p>Sneakers dengan sol nyaman dan desain stylish untuk aktivitas olah raga dan sehari-hari.</p>
-            <div class="price">
-              Rp 172.500
-              <span class="old-price">Rp 345.000</span>
+    <!-- ===== PRODUK REKOMENDASI ===== -->
+    <section id="produk">
+        <h2>Produk Rekomendasi Terbaik</h2>
+        <p class="section-desc">
+            Berikut produk-produk pilihan yang kami rekomendasikan berdasarkan riset dan rating pembeli. 
+            Klik "Beli Sekarang" untuk melihat detail dan harga terbaru di Shopee.
+        </p>
+
+        <div class="product-grid">
+            <!-- Produk 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge badge-terlaris">Terlaris</span>
+                    <img src="asset/jaket tuslant.webp" alt="Jaket Taslant JN Bolak-Balik Pria Wanita" loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&q=80'">
+                </div>
+                <div class="product-content">
+                    <h3>Jaket Taslant JN Bolak-Balik</h3>
+                    <p>Jaket casual dengan bahan Taslan adem dan desain modern untuk berbagai kesempatan.</p>
+                    <div class="product-price">
+                        Rp 161.000
+                        <span class="old-price">Rp 399.000</span>
+                    </div>
+                    <a href="https://s.shopee.co.id/1gBZpKOx36" 
+                       target="_blank" 
+                       rel="nofollow sponsored noopener" 
+                       class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </a>
+                </div>
             </div>
-            <a href="https://s.shopee.co.id/VzcRxRoBZ" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
+
+            <!-- Produk 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge badge-diskon">Diskon 50%</span>
+                    <img src="asset/Osnca-climax hitamtosca.webp" alt="Sepatu Running Osnac Pria Wanita" loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80'">
+                </div>
+                <div class="product-content">
+                    <h3>Osnac - Sepatu Running Olahraga</h3>
+                    <p>Sneakers dengan sol empuk dan desain stylish untuk aktivitas olahraga dan harian.</p>
+                    <div class="product-price">
+                        Rp 172.500
+                        <span class="old-price">Rp 345.000</span>
+                    </div>
+                    <a href="https://s.shopee.co.id/VzcRxRoBZ" 
+                       target="_blank" 
+                       rel="nofollow sponsored noopener" 
+                       class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="asset/kaos-kerah.webp" alt="Kaos Polo Shirt Pria Premium" loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80'">
+                </div>
+                <div class="product-content">
+                    <h3>Kaos Polo Shirt Pria Premium</h3>
+                    <p>Kaos polo katun pique 20S, desain stylis cocok untuk kerja atau santai.</p>
+                    <div class="product-price">Rp 50.109</div>
+                    <a href="https://s.shopee.co.id/3B0Nd5tW8Q" 
+                       target="_blank" 
+                       rel="nofollow sponsored noopener" 
+                       class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produk 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge badge-baru">Baru</span>
+                    <img src="asset/tas-batampx125.webp" alt="Tas Wanita Elegant" loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80'">
+                </div>
+                <div class="product-content">
+                    <h3>Tas Wanita Elegant</h3>
+                    <p>Tas wanita desain elegan dengan ruang cukup untuk kebutuhan harian.</p>
+                    <div class="product-price">Rp 121.000</div>
+                    <a href="https://s.shopee.co.id/8V1tzMwyKA" 
+                       target="_blank" 
+                       rel="nofollow sponsored noopener" 
+                       class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produk 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge badge-diskon">Diskon</span>
+                    <img src="asset/jaket-trucker.webp" alt="Jaket Pria Trucker Military" loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&q=80'">
+                </div>
+                <div class="product-content">
+                    <h3>Jaket Pria Trucker Military</h3>
+                    <p>Jaket trucker dengan desain military trendy dan bahan nyaman untuk cuaca Indonesia.</p>
+                    <div class="product-price">
+                        Rp 185.000
+                        <span class="old-price">Rp 249.000</span>
+                    </div>
+                    <a href="https://s.shopee.co.id/BMm9iEZUR" 
+                       target="_blank" 
+                       rel="nofollow sponsored noopener" 
+                       class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produk 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge badge-diskon">Diskon</span>
+                    <img src="asset/kaos-oversizewanita.webp" alt="Kaos Oversize Wanita" loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&q=80'">
+                </div>
+                <div class="product-content">
+                    <h3>Kaos Oversize Wanita</h3>
+                    <p>Kaos oversize katun lembut, desain casual stylish untuk gaya harian.</p>
+                    <div class="product-price">
+                        Rp 67.500
+                        <span class="old-price">Rp 129.000</span>
+                    </div>
+                    <a href="https://s.shopee.co.id/6KxPYhrrVg" 
+                       target="_blank" 
+                       rel="nofollow sponsored noopener" 
+                       class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KONTEN ASLI 1: CARA KAMI MEMILIH ===== -->
+    <div class="content-section">
+        <h2>Cara Kami Memilih Produk Rekomendasi</h2>
+        <p>
+            Di Reska Stored, kami tidak sembarangan merekomendasikan produk. Setiap produk yang kami 
+            tayangkan di website ini telah melalui <strong>proses kurasi berlapis</strong> untuk memastikan 
+            Anda hanya mendapat rekomendasi terbaik. Kami memahami bahwa membeli produk secara online 
+            memiliki risiko — produk tidak sesuai foto, kualitas buruk, atau penjual tidak responsif. 
+            Karena itu, kami menerapkan standar ketat sebelum merekomendasikan produk apa pun.
+        </p>
+
+        <h3>1. Riset Rating dan Ulasan Pembeli</h3>
+        <p>
+            Kami hanya merekomendasikan produk dengan <strong>rating minimal 4.3 dari 5</strong> dan 
+            <strong>jumlah ulasan minimal 100</strong>. Produk dengan rating di bawah standar ini biasanya 
+            memiliki masalah konsistensi kualitas atau pelayanan penjual. Kami juga membaca ulasan 
+            negatif terlebih dahulu untuk memahami kelemahan produk — bukan hanya ulasan positif.
+        </p>
+
+        <h3>2. Pemeriksaan Reputasi Penjual</h3>
+        <p>
+            Penjual yang kami rekomendasikan harus memiliki reputasi baik di marketplace, dengan 
+            <strong>tingkat penyelesaian pesanan di atas 95%</strong> dan <strong>waktu respons chat 
+            cepat</strong>. Kami menghindari penjual baru tanpa riwayat, meskipun harga produknya lebih murah, 
+            karena risiko pembeli lebih tinggi.
+        </p>
+
+        <h3>3. Analisis Harga dan Nilai</h3>
+        <p>
+            Kami membandingkan harga produk di beberapa toko untuk memastikan Anda mendapat harga yang 
+            wajar. Jika ada produk dengan kualitas serupa tapi harga jauh lebih murah, kami akan 
+            merekomendasikan yang lebih hemat. Sebaliknya, jika harga murah tapi kualitas diragukan, 
+            kami tidak akan merekomendasikan meskipun komisi yang kami dapat lebih besar.
+        </p>
+
+        <h3>4. Verifikasi Deskripsi Produk</h3>
+        <p>
+            Kami memeriksa apakah deskripsi produk sesuai dengan foto dan ulasan pembeli. Produk yang 
+            deskripsinya menyesatkan atau tidak lengkap tidak akan masuk daftar rekomendasi kami.
+        </p>
+
+        <h3>5. Update Berkala</h3>
+        <p>
+            Daftar rekomendasi kami perbarui secara rutin. Produk yang turun rating atau bermasalah 
+            dengan pengiriman akan kami hapus. Sebaliknya, produk baru yang memenuhi kriteria akan 
+            kami tambahkan agar Anda selalu mendapat rekomendasi terkini.
+        </p>
+
+        <p>
+            Dengan proses kurasi ini, kami berharap Anda dapat berbelanja dengan lebih tenang dan 
+            percaya. Jika Anda punya pertanyaan tentang produk tertentu, jangan ragu untuk 
+            <a href="#kontak" style="color: #22c55e; font-weight: 600;">menghubungi kami</a>.
+        </p>
+    </div>
+
+    <!-- ===== KONTEN ASLI 2: PANDUAN BELANJA ===== -->
+    <div class="content-section" id="panduan">
+        <h2>Panduan Belanja Cerdas untuk Pemula</h2>
+        <p>
+            Belanja online bisa sangat menguntungkan jika Anda tahu caranya. Berikut panduan praktis 
+            yang kami susun dari pengalaman berbelanja dan membantu ribuan pembaca menemukan produk terbaik.
+        </p>
+
+        <h3>1. Cek Rating dan Ulasan — Jangan Hanya Lihat Bintang</h3>
+        <p>
+            Rating 4.9 dengan 10 ulasan bisa menipu. Yang lebih penting: <strong>baca ulasan dengan 
+            foto pembeli</strong>. Ulasan dengan foto menunjukkan produk sebenarnya, bukan sekadar 
+            foto jualan. Cari ulasan yang mendetail dan sebutkan kelebihan serta kekurangan produk.
+        </p>
+
+        <h3>2. Sesuaikan dengan Budget dan Kebutuhan</h3>
+        <p>
+            Produk mahal belum tentu cocok untuk Anda, dan produk murah belum tentu buruk. 
+            Tentukan dulu <strong>budget maksimal</strong> dan <strong>fungsi utama</strong> produk. 
+            Misalnya, untuk sepatu kerja sehari-hari, sneakers dengan sol empuk dan warna netral 
+            lebih tepat daripada sepatu lari mahal.
+        </p>
+
+        <h3>3. Perhatikan Ukuran dengan Teliti</h3>
+        <p>
+            Setiap brand punya ukuran berbeda. Selalu cek <strong>tabel ukuran</strong> di deskripsi 
+            produk dan baca ulasan pembeli lain. Jika ragu, ambil satu ukuran lebih besar — lebih baik 
+            sedikit longgar daripada kesempitan.
+        </p>
+
+        <h3>4. Manfaatkan Promo dan Gratis Ongkir</h3>
+        <p>
+            Belanja saat <strong>tanggal kembar</strong> (11.11, 12.12) atau <strong>flash sale</strong> 
+            bisa menghemat 20-50%. Jangan lupa cek voucher toko dan gratis ongkir — ini bisa 
+            menghemat puluhan ribu rupiah per transaksi.
+        </p>
+
+        <h3>5. Simpan Bukti Transaksi</h3>
+        <p>
+            Setelah pembelian, <strong>simpan screenshot</strong> bukti pesanan dan percakapan dengan 
+            penjual. Jika ada masalah, bukti ini berguna saat mengajukan komplain atau pengembalian dana.
+        </p>
+
+        <h3>6. Kenali Kebijakan Pengembalian</h3>
+        <p>
+            Marketplace besar seperti Shopee punya <strong>garansi uang kembali</strong> jika produk 
+            tidak sesuai. Manfaatkan fitur ini jika produk yang datang tidak sesuai deskripsi. 
+            Ajukan komplain maksimal 3 hari setelah barang diterima.
+        </p>
+
+        <p>
+            Dengan mengikuti panduan di atas, Anda bisa mengurangi risiko belanja online dan 
+            mendapatkan produk yang benar-benar sesuai kebutuhan. Selamat berbelanja!
+        </p>
+    </div>
+
+    <!-- ===== KONTEN ASLI 3: TENTANG KAMI ===== -->
+    <div class="content-section" id="tentang">
+        <h2>Tentang Reska Stored</h2>
+        <p>
+            <strong>Reska Stored</strong> adalah website rekomendasi produk independen yang berfokus pada 
+            fashion pria, fashion wanita, sepatu, tas, jaket, dan perlengkapan outdoor. Website ini 
+            didirikan dengan satu tujuan sederhana: <em>membantu orang Indonesia menemukan produk 
+            berkualitas tanpa harus menghabiskan waktu berjam-jam riset sendiri</em>.
+        </p>
+
+        <h3>Misi Kami</h3>
+        <p>
+            Kami percaya bahwa belanja online seharusnya mudah, menyenangkan, dan bebas dari kekecewaan. 
+            Misi kami adalah menjadi jembatan antara konsumen cerdas dan produk berkualitas — dengan 
+            rekomendasi jujur dan informasi yang jelas.
+        </p>
+
+        <h3>Bagaimana Kami Bekerja</h3>
+        <p>
+            Tim kami secara rutin mengamati tren produk di berbagai marketplace, menganalisis ulasan 
+            pembeli, dan menguji produk secara mandiri saat memungkinkan. Setiap rekomendasi kami 
+            tulis berdasarkan riset nyata, bukan sekadar menyalin deskripsi penjual.
+        </p>
+
+        <h3>Kenapa Kami Melakukan Ini?</h3>
+        <p>
+            Kami mendapat komisi kecil dari penjual ketika Anda membeli melalui link di website ini — 
+            <strong>tanpa biaya tambahan untuk Anda</strong>. Komisi ini memungkinkan kami terus 
+            memperbarui konten dan memberikan rekomendasi terbaik secara gratis. Ini adalah model 
+            bisnis yang adil untuk semua pihak: Anda mendapat rekomendasi jujur, penjual mendapat 
+            pembeli, dan kami mendapat komisi untuk melanjutkan pekerjaan ini.
+        </p>
+
+        <h3>Komitmen Kami</h3>
+        <ul>
+            <li><strong>Jujur:</strong> Kami tidak akan merekomendasikan produk yang kami tahu buruk hanya karena komisi tinggi.</li>
+            <li><strong>Transparan:</strong> Setiap link afiliasi di website ini kami tandai dengan jelas.</li>
+            <li><strong>Independen:</strong> Kami bukan bagian dari penjual atau marketplace mana pun.</li>
+            <li><strong>Terus belajar:</strong> Kami memperbarui rekomendasi sesuai tren dan ulasan terbaru.</li>
+        </ul>
+
+        <p>
+            Terima kasih telah mempercayai Reska Stored sebagai panduan belanja Anda. Jika ada 
+            pertanyaan, kritik, atau saran, silakan hubungi kami di 
+            <a href="mailto:info@reskastored.com" style="color: #22c55e; font-weight: 600;">info@reskastored.com</a>.
+        </p>
+    </div>
+
+    <!-- ===== FAQ ===== -->
+    <div class="content-section" id="faq">
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #6b7280;">
+            Jawaban untuk pertanyaan yang paling sering kami terima dari pengunjung.
+        </p>
+
+        <div class="faq-item">
+            <div class="faq-question">Apakah Reska Stored menjual produk langsung?</div>
+            <div class="faq-answer">
+                <p>Tidak. Reska Stored adalah website rekomendasi dan review. Pembelian dilakukan melalui marketplace resmi seperti Shopee dengan link afiliasi yang kami sediakan. Anda akan diarahkan langsung ke halaman produk di marketplace.</p>
+            </div>
         </div>
 
-        <!-- Product 3 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="kaos-kerah.webp" alt="Polo Shirt pria Premium">
-          </div>
-          <div class="product-content">
-            <h3>Kaos Polo shirt Pria Premium Catton 20s</h3>
-            <p>Kaos polo shirt pria lengan pendek ini terbuat dari bahan katun pique 20S . Desainnya yang stylis. Cocok untuk digunakan dalam berbagai kesempatan.</p>
-            <div class="price">Rp 50.109</div>
-            <a href="https://s.shopee.co.id/3B0Nd5tW8Q" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
+        <div class="faq-item">
+            <div class="faq-question">Apakah produk di Reska Stored asli?</div>
+            <div class="faq-answer">
+                <p>Ya. Kami hanya merekomendasikan produk dari penjual terverifikasi di marketplace resmi dengan rating minimal 4.3 dan ulasan positif dari pembeli sebelumnya. Kami tidak merekomendasikan produk tanpa riwayat penjualan yang jelas.</p>
+            </div>
         </div>
 
-        <!-- Product 4 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="shofia-byset.webp" alt="Polo Shirt pria Premium">
-          </div>
-          <div class="product-content">
-            <h3>Sofia set by marcela-Frans-LAVA-Saniya </h3>
-            <p>Set Celana Jubray Chinos wanita kekinian 2025
-              Bahan chinos mix haruka koak premium nyaman dan elegan di pakai sctrec dan lembut</p>
-            <div class="price">Rp 135.000</div>
-            <a href="https://s.shopee.co.id/AUmyP4iBPA" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
+        <div class="faq-item">
+            <div class="faq-question">Berapa lama pengiriman produk?</div>
+            <div class="faq-answer">
+                <p>Pengiriman sepenuhnya diatur oleh penjual di marketplace. Umumnya 1-7 hari kerja tergantung lokasi Anda dan jenis pengiriman yang dipilih. Untuk pengiriman instan atau same-day, bisa kurang dari 24 jam.</p>
+            </div>
         </div>
 
-        <!-- Product 5 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="sendal-wanita.webp" alt="sendal-wanita">
-          </div>
-          <div class="product-content">
-            <h3>New Buenor-Sandal Jepit NBS Premium </h3>
-            <p>Sandal NEW BUENOR Sangat nyaman digunakan, anti slip, kuat dan empuk dipakai.Serta insole di desain khusus mengikuti bentuk kontur kaki.Cocok dipakai di indoor/outdoor.</p>
-            <div class="price">Rp 42.500</div>
-            <a href="https://s.shopee.co.id/4VVlFekGUN" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
+        <div class="faq-item">
+            <div class="faq-question">Apakah ada biaya tambahan jika beli lewat link Reska Stored?</div>
+            <div class="faq-answer">
+                <p>Tidak ada. Harga produk sama persis seperti di marketplace. Kami hanya mendapat komisi kecil dari penjual tanpa menambah harga untuk Anda. Bahkan, kadang kami bisa menemukan harga yang lebih murah karena promosi khusus.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Bagaimana cara memilih produk yang tepat?</div>
+            <div class="faq-answer">
+                <p>Baca deskripsi produk, cek rating dan ulasan pembeli, sesuaikan dengan kebutuhan dan budget Anda. Anda juga bisa membaca panduan belanja kami di bagian atas halaman ini. Jika masih ragu, hubungi kami melalui email.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Apakah Reska Stored punya produk lain selain yang ditampilkan?</div>
+            <div class="faq-answer">
+                <p>Kami terus menambahkan produk baru setiap minggu. Untuk permintaan produk tertentu, silakan hubungi kami melalui email dan kami akan berusaha mencarikannya untuk Anda.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Bagaimana jika produk yang saya beli bermasalah?</div>
+            <div class="faq-answer">
+                <p>Segera hubungi penjual melalui chat marketplace, dan gunakan fitur garansi uang kembali yang tersedia. Kami tidak bertanggung jawab atas transaksi karena pembelian terjadi langsung di marketplace, tapi kami siap membantu memberi saran jika Anda menghadapi masalah.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== DISCLOSURE ===== -->
+    <div class="disclosure-box">
+        <strong>📢 Disclosure Afiliasi:</strong> Website ini mengandung link afiliasi. Ketika Anda membeli 
+        produk melalui link di situs ini, kami mungkin menerima komisi kecil dari penjual. 
+        <strong>Harga produk tidak berubah untuk Anda</strong> — Anda membayar sama seperti berbelanja 
+        langsung di marketplace. Komisi ini digunakan untuk membiayai riset produk dan menjaga website 
+        tetap gratis untuk pengunjung. Kami hanya merekomendasikan produk yang benar-benar kami yakini 
+        berkualitas berdasarkan rating, ulasan, dan riset mandiri.
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reska Stored</h3>
+                <p>Website rekomendasi produk pria & wanita terpercaya. Kami membantu Anda menemukan produk berkualitas dengan harga terjangkau.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#produk">Produk Rekomendasi</a></li>
+                    <li><a href="#panduan">Panduan Belanja</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@reskastored.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                    <li><i class="fas fa-clock"></i> Senin - Minggu: 24 Jam</li>
+                </ul>
+            </div>
         </div>
         
-        <!-- Product 6 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(3)">
-            <div class="product-badge">Baru</div>
-            <img src="tas-batampx125.webp" alt="Tas Wanita">
-          </div>
-          <div class="product-content">
-            <h3>Tas Wanita Elegant</h3>
-            <p>Tas wanita dengan desain elegant dan ruang yang cukup untuk kebutuhan harian.</p>
-            <div class="price">Rp 121.000</div>
-            <a href="https://s.shopee.co.id/8V1tzMwyKA" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
+        <div class="footer-bottom">
+            <p>
+                <strong>Disclosure:</strong> Website ini mengandung link afiliasi. Kami menerima komisi 
+                kecil dari pembelian melalui link di situs ini, tanpa biaya tambahan untuk Anda.
+            </p>
+            <p>© 2026 Reska Stored. All Rights Reserved.</p>
         </div>
+    </footer>
 
-        <!-- Product 7 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="zepry-dusty.webp"alt="zepry-dusty">
-          </div>
-          <div class="product-content">
-            <h3>Dusty brown sporty style </h3>
-            <p>ZEPHYR Dusty Brown Sportstyle Sepatu Sneakers Trail Hiking Pria Wanita - FE20</p>
-            <div class="price">Rp 42.500</div>
-            <a href="https://s.shopee.co.id/9UuSydVEWT" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 8 -->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="sendal-pria.webp" alt="sendal-pria">
-          </div>
-          <div class="product-content">
-            <h3>Sendal Jepit pria Premium </h3>
-            <p>Sandal Pria Japit Terbaru Kualitas Terbaik Sandal Luar Ruangan Kekinian sandal japit pria carviel sandal murah sandal terbaru.</p>
-            <div class="price">Rp 42.500</div>
-            <a href="https://s.shopee.co.id/40ZWKrVr3U" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 9 -->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="safety-shoes.webp" alt="safety-shoes">
-          </div>
-          <div class="product-content">
-            <h3>Sepatu Safety Sneakers ujung besi Pria Cowok Dewasa </h3>
-            <p>cocok untuk Kerja Casual Kantor sepatu Ringan,Kerja Proyek Keren Olahraga Lapangan Septy Shoes</p>
-            <div class="price">Rp 340.000</div>
-            <a href="https://s.shopee.co.id/3fwfwKZ1SI" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 10 -->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="hoka-shoeshiking.png" alt="hoka-shoeshiking">
-          </div>
-          <div class="product-content">
-            <h3>Hoka Original-Sepatu Running Trailrun Hiking </h3>
-            <p>Sepatu Running Trailrun Hiking Hoka Original Hoka Skyline Float X Black.Cocok dipakai di indoor/outdoor.</p>
-            <div class="price">Rp 750.000</div>
-            <a href="https://s.shopee.co.id/13NaQFKJo" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 11 -->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="joger-pants.webp" alt="joger-pants">
-          </div>
-          <div class="product-content">
-            <h3>Jogerpants cargo Pria wanita </h3>
-            <p>Celana Jogerpants cocok banget untuk kegaitan outdoor hiking,camp.sporty dan slimfit stretch</p>
-            <div class="price">Rp 144.000</div>
-            <a href="https://s.shopee.co.id/9pXJJDTtYp" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 12-->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="oneset-renda.webp" alt="oneset-renda">
-          </div>
-          <div class="product-content">
-            <h3>Oneset Renda Rayon Busui Friendly </h3>
-            <p>Oneset Renda Rayon Busui Friendly Ada Tali Samping Bisa Cod Motif Cantik.</p>
-            <div class="price">Rp 75.000</div>
-            <a href="https://s.shopee.co.id/4q8dMvLuQi" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 13 -->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="tas-selempang.webp" alt="tas-selempang">
-          </div>
-          <div class="product-content">
-            <h3>Tas wanita fashion import </h3>
-            <p>Tas selempang wanita import modis dan elegan dan murah tapi gak murahan</p>
-            <div class="price">Rp 127.999</div>
-            <a href="https://s.shopee.co.id/6pthkvOQyk" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 14 -->
-          <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="tas-jingjingwanita.webp" alt="tas-jingjingwanita">
-          </div>
-          <div class="product-content">
-            <h3>Tas jingjing wanita elegan </h3>
-            <p>Handbag-tas wanita elegan bahan import fashion korea modis termurah</p>
-            <div class="price">Rp 124.999</div>
-            <a href="https://s.shopee.co.id/1LYlDAe81Y" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
         
-        <!-- Product 15 -->
-        <div class="product-card">
-          <div class="product-image" onclick="openImagePreview(2)">
-            <img src="jaketpria-elegan.webp" alt="jaketpria-elegan">
-          </div>
-          <div class="product-content">
-            <h3>ZDM-Jaket Parka Pria Elegan Bahan Baby Canvas </h3>
-            <p>Jaket pria baby canvas cocok banget buat riding dan kegiatan outdoor.</p>
-            <div class="price">Rp 163.000</div>
-            <a href="https://s.shopee.co.id/20oS0gUJro" class="btn-buy">
-              <i class="fas fa-shopping-cart"></i>
-              <span>Beli Sekarang</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section id="keunggulan">
-    <div class="container">
-      <div class="section-title">
-        <h2>Kenapa Belanja di Reska Stored?</h2>
-        <p>Kami memberikan kemudahan belanja ,semua produk marketplace terbaik untuk Anda dengan berbagai keunggulan</p>
-      </div>
-      <div class="benefits">
-        <div class="benefit">
-          <div class="benefit-icon">
-            <i class="fas fa-award"></i>
-          </div>
-          <h4>Produk Terpilih</h4>
-          <p>Hanya produk dengan kualitas terbaik dan penjualan tertinggi yang kami rekomendasikan. Setiap produk telah kami seleksi dari berbagai kolom komentar.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h4>Aman & Terpercaya</h4>
-          <p>Link resmi marketplace, transaksi aman tanpa ribet. Garansi uang kembali jika produk tidak sesuai.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">
-            <i class="fas fa-sync-alt"></i>
-          </div>
-          <h4>Update Berkala</h4>
-          <p>Produk selalu diperbarui mengikuti tren terbaru. Kami memastikan Anda mendapatkan produk terkini.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h4>Layanan Pelanggan</h4>
-          <p>siap membantu melalui berbagai channel komunikasi untuk kebutuhan Anda.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="kontak">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Reska Stored</h3>
-        <p>Rekomendasi produk pilihan pria & wanita dengan kualitas terbaik dan harga terjangkau. Belanja mudah, cepat, dan terpercaya.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Kontak Kami</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
-        <p><i class="fas fa-clock"></i> Senin - Minggu: open</p>
-      </div>
-      <div class="footer-section">
-        <h3>Informasi</h3>
-        <p><a href="#">Kebijakan Privasi</a></p>
-        <p><a href="#">Syarat & Ketentuan</a></p>
-        <p><a href="#">FAQ</a></p>
-        <p><a href="#">Cara Berbelanja</a></p>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>© 2025 Reska Stored • All Product Recommendation • All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-        ? '<i class="fas fa-times"></i>' 
-        : '<i class="fas fa-bars"></i>';
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-      });
-    });
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
         
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
         
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-    
-    // Header animation on load
-    window.addEventListener('load', () => {
-      const headerContent = document.querySelector('.header-content');
-      headerContent.style.animation = 'fadeInUp 1s ease-out';
-    });
-
-    // Image Preview Modal Functionality
-const modal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const imageTitle = document.getElementById('imageTitle');
-const imageCounter = document.getElementById('imageCounter');
-const closeModal = document.getElementById('closeModal');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-// Data gambar produk - TAMBAHKAN SEMUA GAMBAR
-const productImages = [
-  {
-    src: 'jaket tuslant.webp',
-    title: 'Jaket Taslant JN Bolak-Balik Cowok Cewek',
-    desc: 'Jaket pria wanita casual dengan bahan LUAR TASLAN nyaman dan desain modern untuk berbagai kesempatan.'
-  },
-  {
-    src: 'Osnca-climax hitamtosca.webp',
-    title: 'Osnac- Sepatu Running Olahraga Pria Wanita',
-    desc: 'Sneakers dengan sol nyaman dan desain stylish untuk aktivitas olah raga dan sehari-hari.'
-  },
-  {
-    src: 'kaos-kerah.webp',
-    title: 'Kaos Polo shirt Pria Premium Catton 20s',
-    desc: 'Kaos polo shirt pria lengan pendek ini terbuat dari bahan katun pique 20S. Desainnya yang stylis. Cocok untuk digunakan dalam berbagai kesempatan.'
-  },
-  {
-    src: 'shofia-byset.webp',
-    title: 'Sofia set by marcela-Frans-LAVA-Saniya',
-    desc: 'Set Celana Jubray Chinos wanita kekinian 2025. Bahan chinos mix haruka koak premium nyaman dan elegan di pakai.'
-  },
-  {
-    src: 'sendal-wanita.webp',
-    title: 'New Buenor-Sandal Jepit NBS Premium',
-    desc: 'Sandal NEW BUENOR Sangat nyaman digunakan, anti slip, kuat dan empuk dipakai. Serta insole di desain khusus mengikuti bentuk kontur kaki.'
-  },
-  {
-    src: 'tas-batampx125.webp',
-    title: 'Tas Wanita Elegant',
-    desc: 'Tas wanita dengan desain elegant dan ruang yang cukup untuk kebutuhan harian.'
-  },
-  {
-    src: 'sendal-pria.webp',
-    title: 'Tas Wanita ElegantSendal Jepit pria Premium',
-    desc: 'Sandal Pria Japit Terbaru Kualitas Terbaik Sandal Luar Ruangan Kekinian sandal japit pria carviel sandal murah sandal terbaru.'
-  },
-  {
-    src: 'safety-shoes.webp',
-    title: 'Sepatu Safety Sneakers ujung besi Pria Cowok Dewasa',
-    desc: 'cocok untuk Kerja Casual Kantor sepatu Ringan,Kerja Proyek Keren Olahraga Lapangan Safety Shoes.'
-  },
-  {
-    src: 'hoka-shoeshiking.png',
-    title: 'Hoka Original-Sepatu Running Trailrun Hiking',
-    desc: 'Sepatu Running Trailrun Hiking Hoka Original Hoka Skyline Float X Black.Cocok dipakai di indoor/outdoor..'
-  },
-  {
-    src: 'joger-pants.webp',
-    title: 'Jogerpants cargo Pria wanita',
-    desc: 'Celana Jogerpants cocok banget untuk kegaitan outdoor hiking,camp.sporty dan slimfit stretch.'
-  },
-  {
-    src: 'oneset-renda.webp',
-    title: 'Oneset Renda Rayon Busui Friendly',
-    desc: 'Oneset Renda Rayon Busui Friendly Ada Tali Samping Bisa Cod Motif Cantik.'
-  },
-  {
-    src: 'tas-selempang.webp',
-    title: 'Tas wanita fashion import',
-    desc: 'Tas selempang wanita import modis dan elegan dan murah tapi gak murahan.'
-  },
-  {
-    src: 'tas-jingjingwanita.webp',
-    title: 'Tas jingjing wanita elegan',
-    desc: 'Handbag-tas wanita elegan bahan import fashion korea modis termurah.'
-  },
-  {
-    src: 'jaketpria-elegan.webp',
-    title: 'ZDM-Jaket Parka Pria Elegan Bahan Baby Canvas',
-    desc: 'Jaket pria baby canvas cocok banget buat riding dan kegiatan outdoor.'
-  },
-  {
-    src: 'zepry-dusty.webp',
-    title: 'Dusty brown sporty stylye',
-    desc: 'ZEPHYR Dusty Brown Sportstyle Sepatu Sneakers Trail Hiking Pria Wanita - FE2',
-  },
-];
-
-let currentImageIndex = 0;
-
-// Fungsi untuk membuka modal preview gambar
-function openImagePreview(index) {
-  // Validasi index agar tidak melebihi jumlah gambar
-  if (index < 0 || index >= productImages.length) {
-    console.error('Index gambar tidak valid:', index);
-    return;
-  }
-  
-  currentImageIndex = index;
-  updateModal();
-  modal.style.display = 'block';
-  document.body.style.overflow = 'hidden';
-}
-
-// Fungsi untuk update konten modal
-function updateModal() {
-  const currentImage = productImages[currentImageIndex];
-  
-  // Pastikan gambar ada sebelum menampilkan
-  modalImage.src = currentImage.src;
-  modalImage.alt = currentImage.title;
-  imageTitle.textContent = `${currentImage.title} - ${currentImage.desc}`;
-  imageCounter.textContent = `${currentImageIndex + 1} / ${productImages.length}`;
-  
-  // Load error handling
-  modalImage.onerror = function() {
-    console.error('Gagal memuat gambar:', currentImage.src);
-    this.src = 'https://via.placeholder.com/600x400?text=Gambar+Tidak+Tersedia';
-    imageTitle.textContent = 'Gambar tidak dapat dimuat - ' + currentImage.title;
-  };
-}
-
-// Fungsi untuk navigasi gambar
-function navigateImage(direction) {
-  if (direction === 'next') {
-    currentImageIndex = (currentImageIndex + 1) % productImages.length;
-  } else if (direction === 'prev') {
-    currentImageIndex = (currentImageIndex - 1 + productImages.length) % productImages.length;
-  }
-  updateModal();
-}
-
-// Event listeners untuk modal
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-  document.body.style.overflow = 'auto';
-});
-
-prevBtn.addEventListener('click', () => navigateImage('prev'));
-nextBtn.addEventListener('click', () => navigateImage('next'));
-
-// Close modal dengan klik di luar gambar
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-});
-
-// Navigasi dengan keyboard
-document.addEventListener('keydown', (e) => {
-  if (modal.style.display === 'block') {
-    if (e.key === 'Escape') {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    } else if (e.key === 'ArrowLeft') {
-      navigateImage('prev');
-    } else if (e.key === 'ArrowRight') {
-      navigateImage('next');
-    }
-  }
-});
-
-// Otomatis menambahkan event listeners untuk semua gambar produk
-document.addEventListener('DOMContentLoaded', function() {
-  const productImageContainers = document.querySelectorAll('.product-image');
-  
-  productImageContainers.forEach((imgContainer, index) => {
-    // Pastikan index tidak melebihi jumlah gambar yang ada
-    if (index < productImages.length) {
-      imgContainer.addEventListener('click', () => openImagePreview(index));
-    } else {
-      // Jika ada lebih banyak produk daripada gambar di array
-      console.warn(`Produk index ${index} tidak memiliki data gambar`);
-    }
-  });
-});
-  </script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    if (other !== item) other.classList.remove('open');
+                });
+                item.classList.toggle('open');
+            });
+        });
+        
+        // Track klik affiliate ke Google Analytics
+        document.querySelectorAll('.btn-buy').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productName = this.closest('.product-card').querySelector('h3').textContent;
+                if (typeof gtag === 'function') {
+                    gtag('event', 'affiliate_click', {
+                        event_category: 'engagement',
+                        event_label: productName,
+                        value: 1
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
